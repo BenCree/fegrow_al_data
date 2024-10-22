@@ -1,0 +1,21 @@
+hostname sb050.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:74:c8:dc brd ff:ff:ff:ff:ff:ff inet 10.3.81.130/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe74:c8dc/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:dd brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:de brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:df brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f6:20 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.130/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.97.130/22 brd 10.3.99.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::3abc:103:4c:f620/64 scope link valid_lft forever preferred_lft forever 7: ib1: <BROADCAST,MULTICAST> mtu 4092 qdisc noop state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f6:21 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-19 22:37:55,100 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.130:43738'
+2024-01-19 22:37:57,323 - distributed.diskutils - INFO - Found stale lock file and directory '/scratch/dask-worker-space/worker-qumqnaf1', purging
+2024-01-19 22:37:57,324 - distributed.diskutils - INFO - Found stale lock file and directory '/scratch/dask-worker-space/worker-cj1skheg', purging
+2024-01-19 22:38:13,135 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.130:40476
+2024-01-19 22:38:13,137 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.130:40476
+2024-01-19 22:38:13,137 - distributed.worker - INFO -           Worker name:            SLURMCluster-99
+2024-01-19 22:38:13,137 - distributed.worker - INFO -          dashboard at:          10.3.89.130:35921
+2024-01-19 22:38:13,137 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.11:39179
+2024-01-19 22:38:13,137 - distributed.worker - INFO - -------------------------------------------------
+2024-01-19 22:38:13,137 - distributed.worker - INFO -               Threads:                          2
+2024-01-19 22:38:13,137 - distributed.worker - INFO -                Memory:                  20.49 GiB
+2024-01-19 22:38:13,137 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-e8geyo64
+2024-01-19 22:38:13,137 - distributed.worker - INFO - -------------------------------------------------
+2024-01-19 22:38:13,191 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.11:39179
+2024-01-19 22:38:13,192 - distributed.worker - INFO - -------------------------------------------------
+2024-01-19 22:38:13,192 - distributed.core - INFO - Starting established connection to tcp://10.3.88.11:39179
+2024-01-19 23:43:57,095 - distributed.core - INFO - Event loop was unresponsive in Nanny for 55.24s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 23:43:57,099 - distributed.core - INFO - Event loop was unresponsive in Worker for 55.25s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 19799793 ON sb050 CANCELLED AT 2024-01-20T00:43:58 ***

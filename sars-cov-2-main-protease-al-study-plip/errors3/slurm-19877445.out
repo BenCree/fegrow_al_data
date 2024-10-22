@@ -1,0 +1,35 @@
+hostname sb011.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:61:07:a6 brd ff:ff:ff:ff:ff:ff inet 10.3.81.91/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe61:7a6/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:61:07:a7 brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:61:07:a8 brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:61:07:a9 brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:88:66:39:03:00:23:bb:81 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.91/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.93.91/22 brd 10.3.95.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::8a66:3903:23:bb81/64 scope link valid_lft forever preferred_lft forever 7: ib1: <BROADCAST,MULTICAST> mtu 4092 qdisc noop state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:88:66:39:03:00:23:bb:82 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-28 09:33:57,852 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.91:37060'
+2024-01-28 09:34:14,544 - distributed.worker - INFO -       Start worker at:     tcp://10.3.89.91:35641
+2024-01-28 09:34:14,546 - distributed.worker - INFO -          Listening to:     tcp://10.3.89.91:35641
+2024-01-28 09:34:14,546 - distributed.worker - INFO -           Worker name:           SLURMCluster-491
+2024-01-28 09:34:14,546 - distributed.worker - INFO -          dashboard at:           10.3.89.91:40101
+2024-01-28 09:34:14,546 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.11:44532
+2024-01-28 09:34:14,546 - distributed.worker - INFO - -------------------------------------------------
+2024-01-28 09:34:14,547 - distributed.worker - INFO -               Threads:                          2
+2024-01-28 09:34:14,547 - distributed.worker - INFO -                Memory:                  20.49 GiB
+2024-01-28 09:34:14,547 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-97b5rxo7
+2024-01-28 09:34:14,547 - distributed.worker - INFO - -------------------------------------------------
+2024-01-28 09:34:14,652 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.11:44532
+2024-01-28 09:34:14,652 - distributed.worker - INFO - -------------------------------------------------
+2024-01-28 09:34:14,653 - distributed.core - INFO - Starting established connection to tcp://10.3.88.11:44532
+2024-01-28 09:45:10,313 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-28 09:45:17,430 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.77s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-28 09:45:42,044 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.88s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-28 09:49:54,694 - distributed.core - INFO - Event loop was unresponsive in Worker for 69.44s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-28 09:49:54,694 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 69.44s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-28 09:50:03,137 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom S (index 6)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-28 09:50:09,698 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom S (index 6)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+2024-01-28 09:50:50,415 [WARNING] [__init__.py:5] root: Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+2024-01-28 09:51:07,187 - distributed.nanny - INFO - Worker process 15686 was killed by signal 11
+2024-01-28 09:51:07,202 - distributed.nanny - WARNING - Restarting worker
+slurmstepd: error: *** JOB 19877445 ON sb011 CANCELLED AT 2024-01-28T09:51:22 ***

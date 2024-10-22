@@ -1,0 +1,27 @@
+hostname sb024.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:74:c8:a8 brd ff:ff:ff:ff:ff:ff inet 10.3.81.104/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe74:c8a8/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:a9 brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:aa brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:ab brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f1:f0 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.104/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.97.104/22 brd 10.3.99.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::3abc:103:4c:f1f0/64 scope link valid_lft forever preferred_lft forever 7: ib1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 4092 qdisc pfifo_fast state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f1:f1 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-22 15:48:14,866 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.104:35253'
+2024-01-22 15:48:16,854 - distributed.diskutils - INFO - Found stale lock file and directory '/scratch/dask-worker-space/worker-0rv2r05f', purging
+2024-01-22 15:48:16,855 - distributed.diskutils - INFO - Found stale lock file and directory '/scratch/dask-worker-space/worker-232opein', purging
+2024-01-22 15:48:33,619 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.104:35332
+2024-01-22 15:48:33,620 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.104:35332
+2024-01-22 15:48:33,620 - distributed.worker - INFO -           Worker name:           SLURMCluster-484
+2024-01-22 15:48:33,620 - distributed.worker - INFO -          dashboard at:          10.3.89.104:39794
+2024-01-22 15:48:33,620 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.11:41950
+2024-01-22 15:48:33,620 - distributed.worker - INFO - -------------------------------------------------
+2024-01-22 15:48:33,620 - distributed.worker - INFO -               Threads:                          2
+2024-01-22 15:48:33,620 - distributed.worker - INFO -                Memory:                  20.49 GiB
+2024-01-22 15:48:33,620 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-1ro3ybrz
+2024-01-22 15:48:33,621 - distributed.worker - INFO - -------------------------------------------------
+2024-01-22 15:48:33,686 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.11:41950
+2024-01-22 15:48:33,686 - distributed.worker - INFO - -------------------------------------------------
+2024-01-22 15:48:33,686 - distributed.core - INFO - Starting established connection to tcp://10.3.88.11:41950
+2024-01-22 17:18:02,735 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+2024-01-22 17:19:39,631 - distributed.nanny - INFO - Worker process 5588 was killed by signal 11
+2024-01-22 17:19:49,634 - distributed.nanny - WARNING - Restarting worker
+slurmstepd: error: *** JOB 19809441 ON sb024 CANCELLED AT 2024-01-22T17:20:05 ***

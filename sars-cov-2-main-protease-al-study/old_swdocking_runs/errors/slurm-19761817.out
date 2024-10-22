@@ -1,0 +1,929 @@
+hostname sb050.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:74:c8:dc brd ff:ff:ff:ff:ff:ff inet 10.3.81.130/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe74:c8dc/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:dd brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:de brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:df brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f6:20 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.130/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.97.130/22 brd 10.3.99.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::3abc:103:4c:f620/64 scope link valid_lft forever preferred_lft forever 7: ib1: <BROADCAST,MULTICAST> mtu 4092 qdisc noop state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f6:21 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-16 11:48:21,237 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.130:37644'
+2024-01-16 11:48:21,410 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.130:32880'
+2024-01-16 11:49:30,469 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.130:38063
+2024-01-16 11:49:30,469 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.130:44110
+2024-01-16 11:49:30,469 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.130:38063
+2024-01-16 11:49:30,470 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.130:44110
+2024-01-16 11:49:30,470 - distributed.worker - INFO -           Worker name:          SLURMCluster-77-1
+2024-01-16 11:49:30,470 - distributed.worker - INFO -           Worker name:          SLURMCluster-77-0
+2024-01-16 11:49:30,470 - distributed.worker - INFO -          dashboard at:          10.3.89.130:40413
+2024-01-16 11:49:30,470 - distributed.worker - INFO -          dashboard at:          10.3.89.130:39914
+2024-01-16 11:49:30,470 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:37277
+2024-01-16 11:49:30,470 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,470 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:37277
+2024-01-16 11:49:30,470 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,470 - distributed.worker - INFO -               Threads:                          2
+2024-01-16 11:49:30,470 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-16 11:49:30,470 - distributed.worker - INFO -               Threads:                          2
+2024-01-16 11:49:30,470 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-_p1ry8y2
+2024-01-16 11:49:30,470 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-16 11:49:30,470 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-i4kvjfok
+2024-01-16 11:49:30,470 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,470 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,781 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:37277
+2024-01-16 11:49:30,781 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,782 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:37277
+2024-01-16 11:49:30,790 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:37277
+2024-01-16 11:49:30,790 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,791 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:37277
+2024-01-16 11:50:12,407 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:50:12,409 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:50:42,788 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:50:42,797 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:51:13,788 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:51:13,799 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:51:44,787 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:51:44,797 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:52:15,786 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:52:15,797 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:52:46,787 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:52:46,797 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:53:17,789 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:53:17,799 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:53:48,788 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:53:48,797 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:54:19,787 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:54:19,799 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:59:13,064 - distributed.core - INFO - Event loop was unresponsive in Worker for 280.62s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-16 11:59:13,161 - distributed.core - INFO - Event loop was unresponsive in Worker for 280.71s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+2024-01-16 12:00:50,021 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.43s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-16 12:00:50,024 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.42s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+2024-01-16 12:01:04,234 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-2e23a8d2-1f56-4909-9970-c34c85042e2b
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]C1=C(C([H])([H])c2c([H])c([H])c(Cl)c([H])c2[H])N([H])C(=S)N([H])[C@@]1([H])c1c([H])nc([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-16 12:01:08,866 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-0f49e354-d332-4dc6-869b-019690a1cd66
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(N([H])C2(c3nc([H])c([H])c([H])c3C(F)(F)F)C([H])([H])C([H])([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:13,004 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-5ae1aef7-f5d9-443e-b134-def4af161ca3
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-n2c(=O)c(-c3c([H])c([H])c(Br)c([H])c3[H])c([H])n2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:16,649 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-5c3ef958-2e97-4c9a-9da6-bdadee7fec87
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-n2nnc(-c3c([H])nc(OC([H])(C([H])([H])[H])C([H])([H])[H])c([H])c3[H])n2)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+2024-01-16 12:01:21,590 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-636beb4b-2a94-4f72-9a36-8049fb733631
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(C2=C(c3c([H])c([H])c4nc([H])c([H])c([H])c4c3[H])C([H])([H])C([H])([H])C2=O)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:26,715 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-67ab50ae-0a0e-4dc6-923f-86567c7a0a14
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-n2c(N([H])c3c([H])c([H])c([H])c([H])c3C(=O)N([H])[H])nn([H])c2=S)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:30,510 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-757ede3f-ff9f-4ca4-9385-a1060c2f2d97
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-c2nnc([C@]3([H])N=C(N([H])[H])OC3([H])[H])o2)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 6 (atoms 6-7 of element (C-N)
+
+2024-01-16 12:01:34,145 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-79a9cfd4-01d9-4e69-829a-27268d584d8d
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(C(=Nc2c([H])c([H])c(F)c(F)c2[H])N([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:37,889 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-8036d40b-731d-4439-b149-edafed3307cf
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c([C@]([H])(C(=O)C(=O)C(F)(F)F)N([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:43,484 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-84db22d4-a7f1-4868-be42-f31022960dd4
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-c2nnc3sc(N(c4c([H])c([H])c([H])c([H])c4[H])C([H])([H])[H])nn23)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:43,664 - distributed.nanny - INFO - Worker process 10180 was killed by signal 11
+2024-01-16 12:01:43,669 - distributed.nanny - WARNING - Restarting worker
+2024-01-16 12:01:46,588 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-1a223915-e922-4d5e-86cb-fb5373e0d303
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(C(F)(F)C(=O)N([H])c2c([H])c([H])c3c([H])c([H])n([H])c3c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "OpenMMException('PytorchStreamReader failed reading zip archive: file read failed\\nException raised from valid at /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1650965732461/work/caffe2/serialize/inline_container.cc:152 (most recent call first):\\nframe #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x68 (0x2b130b9b3a78 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torch/lib/libc10.so)\\nframe #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0xf3 (0x2b130b990c23 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torch/lib/libc10.so)\\nframe #2: caffe2::serialize::PyTorchStreamReader::valid(char const*, char const*) + 0x343 (0x2b130e5c5133 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)\\nframe #3: caffe2::serialize::PyTorchStreamReader::init() + 0x98 (0x2b130e5c5608 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)\\nframe #4: caffe2::serialize::PyTorchStreamReader::PyTorchStreamReader(std::shared_ptr<caffe2::serialize::ReadAdapterInterface>) + 0x97 (0x2b130e5c6947 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)\\nframe #5: torch::jit::load(std::shared_ptr<caffe2::serialize::ReadAdapterInterface>, c10::optional<c10::Device>, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&) + 0xc4 (0x2b130f0ce174 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)\\nframe #6: torch::jit::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, c10::optional<c10::Device>, std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&) + 0xe1 (0x2b130f0cf591 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)\\nframe #7: torch::jit::load(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, c10::optional<c10::Device>) + 0x8e (0x2b130f0cf67e in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)\\nframe #8: TorchPlugin::TorchForceImpl::initialize(OpenMM::ContextImpl&) + 0x67 (0x2b130b973d07 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/plugins/../libOpenMMTorch.so)\\nframe #9: OpenMM::ContextImpl::initialize() + 0x487 (0x2b130b361437 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/openmm/../../../libOpenMM.so.8.0)\\nframe #10: OpenMM::Context::Context(OpenMM::System const&, OpenMM::Integrator&, OpenMM::Platform&) + 0x82 (0x2b130b3596f2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/openmm/../../../libOpenMM.so.8.0)\\nframe #11: <unknown function> + 0x17f64d (0x2b130b10f64d in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/openmm/_openmm.cpython-39-x86_64-linux-gnu.so)\\nframe #12: <unknown function> + 0x14e568 (0x56194d402568 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #13: PyObject_Call + 0x15f (0x56194d4010af in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #14: _PyEval_EvalFrameDefault + 0x58b4 (0x56194d3e86e4 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #15: <unknown function> + 0x12df94 (0x56194d3e1f94 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #16: _PyObject_FastCallDictTstate + 0x142 (0x56194d3eaee2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #17: <unknown function> + 0x14a0d9 (0x56194d3fe0d9 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #18: _PyObject_MakeTpCall + 0x303 (0x56194d3eb693 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #19: _PyEval_EvalFrameDefault + 0x4fa0 (0x56194d3e7dd0 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #20: <unknown function> + 0x12df94 (0x56194d3e1f94 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #21: _PyFunction_Vectorcall + 0xd9 (0x56194d3f33f9 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #22: _PyObject_FastCallDictTstate + 0x1a5 (0x56194d3eaf45 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #23: <unknown function> + 0x14a0d9 (0x56194d3fe0d9 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #24: _PyObject_MakeTpCall + 0x303 (0x56194d3eb693 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #25: _PyEval_EvalFrameDefault + 0x5156 (0x56194d3e7f86 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #26: <unknown function> + 0x12df94 (0x56194d3e1f94 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #27: _PyFunction_Vectorcall + 0xd9 (0x56194d3f33f9 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #28: PyObject_Call + 0xbc (0x56194d40100c in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #29: _PyEval_EvalFrameDefault + 0x45a6 (0x56194d3e73d6 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #30: <unknown function> + 0x12df94 (0x56194d3e1f94 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #31: <unknown function> + 0x14c88b (0x56194d40088b in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #32: _PyEval_EvalFrameDefault + 0x11f2 (0x56194d3e4022 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #33: <unknown function> + 0x13f6a2 (0x56194d3f36a2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #34: _PyEval_EvalFrameDefault + 0x45a6 (0x56194d3e73d6 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #35: <unknown function> + 0x13f6a2 (0x56194d3f36a2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #36: _PyEval_EvalFrameDefault + 0x3e2 (0x56194d3e3212 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #37: <unknown function> + 0x13f6a2 (0x56194d3f36a2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #38: _PyEval_EvalFrameDefault + 0x45a6 (0x56194d3e73d6 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #39: <unknown function> + 0x13f6a2 (0x56194d3f36a2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #40: _PyEval_EvalFrameDefault + 0x696 (0x56194d3e34c6 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #41: <unknown function> + 0x13f6a2 (0x56194d3f36a2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #42: _PyEval_EvalFrameDefault + 0x45a6 (0x56194d3e73d6 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #43: <unknown function> + 0x13f6a2 (0x56194d3f36a2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #44: _PyEval_EvalFrameDefault + 0x696 (0x56194d3e34c6 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #45: <unknown function> + 0x13f6a2 (0x56194d3f36a2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #46: _PyEval_EvalFrameDefault + 0x696 (0x56194d3e34c6 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #47: <unknown function> + 0x13f6a2 (0x56194d3f36a2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #48: <unknown function> + 0x14ca43 (0x56194d400a43 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #49: <unknown function> + 0x2244b2 (0x56194d4d84b2 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #50: <unknown function> + 0x224464 (0x56194d4d8464 in /mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/bin/python)\\nframe #51: <unknown function> + 0x7ea5 (0x2b12d9e05ea5 in /lib64/libpthread.so.0)\\nframe #52: clone + 0x6d (0x2b12da821b0d in /lib64/libc.so.6)\\n')"
+
+2024-01-16 12:01:47,114 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.130:45917
+2024-01-16 12:01:47,115 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.130:45917
+2024-01-16 12:01:47,115 - distributed.worker - INFO -           Worker name:          SLURMCluster-77-0
+2024-01-16 12:01:47,115 - distributed.worker - INFO -          dashboard at:          10.3.89.130:43501
+2024-01-16 12:01:47,115 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:37277
+2024-01-16 12:01:47,115 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 12:01:47,115 - distributed.worker - INFO -               Threads:                          2
+2024-01-16 12:01:47,115 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-16 12:01:47,115 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-dtyu5ezv
+2024-01-16 12:01:47,115 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 12:01:47,154 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:37277
+2024-01-16 12:01:47,154 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 12:01:47,155 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:37277
+2024-01-16 12:01:49,810 - distributed.utils_perf - INFO - full garbage collection released 10.88 MiB from 492763 reference cycles (threshold: 9.54 MiB)
+2024-01-16 12:01:51,553 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-8aa3d79e-6309-47eb-8fbd-8c1d7381bf52
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-c2sc([H])c(-c3c([H])c([H])c([H])c([H])c3C(F)(F)F)c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:53,643 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.43s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-16 12:01:56,820 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-8e693f28-c41c-4d66-a8bb-cdc225f32902
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]ON([H])C(=O)C([H])([H])C([H])([H])C([H])([H])C([H])([H])C1=NN(c2c([H])nc([H])c([H])c2[H])C(=O)C([H])([H])C1([H])[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-16 12:01:59,936 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-28148ae2-a5e6-4dc2-afa2-b5c6aa1f1faa
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2af499476ef0>, 6, '[H]N=[N+]=Nc1c([H])nc([H])n1-c1c([H])nc([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:01,187 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-08c6a4d2-fda6-4f61-adda-cf1dd05442ca
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c([C@]([H])(Sc2c([H])c([H])c(OC([H])([H])[H])c(OC([H])([H])[H])c2[H])C([H])([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:02,957 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-901ce6d1-3363-46d8-bdde-58704df4714f
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2af499476ef0>, 6, '[H]c1nc([H])c([C@]2([H])OC([H])([H])C([H])([H])N2c2c([H])c([H])c([H])c3c([H])c([H])c([H])c([H])c23)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:05,516 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-9e9c265b-5835-45d1-89c6-2f1b177257d8
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(N2C(=O)N([H])C(=O)[C@]2([H])N([H])C([H])([H])c2c([H])c([H])nc([H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:07,841 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-93243dbc-9568-49d9-8eec-bf1142e22288
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2af499476ef0>, 6, '[H]c1nc([H])c(C([H])([H])Sc2c([H])c([H])c([H])c(N([H])C(=O)C([H])([H])[H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:10,444 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-a9c30101-960b-4133-ad90-6231e8ad01af
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(C([H])([H])c2c([H])nn([H])c2-c2nc(OC([H])([H])[H])c([H])c([H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:10,946 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-b319d4a4-d799-48da-8fe2-c9343edd30af
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2af499476ef0>, 6, '[H]c1nc([H])c(O[C@]([H])(c2nc([H])c([H])c(C([H])([H])[H])c2[H])C([H])([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-N)
+
+2024-01-16 12:02:14,399 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-b68c1052-361b-42e8-9ea7-56be34bdd220
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(C2=C([C@@]([H])(c3c([H])c([H])c([H])c([H])c3[H])C([H])([H])[H])C([H])([H])OC2=O)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:14,497 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-c07ca179-1274-48cd-aec3-d5ef70280e5f
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2af499476ef0>, 6, '[H]C(=Nc1c([H])nc(C(F)(F)F)c([H])c1[H])c1c([H])nc([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:19,300 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-c878f961-2048-430b-ae26-fc2aede5d133
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-n2nnnc2Oc2nc3c([H])c([H])c([H])c([H])c3n2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:22,030 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-d34d3deb-f3d0-4f6e-b6ca-be2d10d47580
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2af499476ef0>, 6, '[H]c1nc([H])c(C([H])([H])n2nc([H])c([H])c2C([H])([H])N2C([H])([H])C([H])([H])N([H])C([H])([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:26,377 - distributed.utils_perf - WARNING - full garbage collections took 14% CPU time recently (threshold: 10%)
+2024-01-16 12:02:26,511 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-f221c948-919e-4d90-bb3b-b3c5a247cd27
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-c2nnc([H])n2-c2c([H])c([H])c(N([H])[H])c([H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:26,840 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-db0c5888-33d9-49ff-9962-83f616eac511
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1302bdb220>, 6, '[H]c1nc([H])c(-c2c([H])c(=O)n(OC([H])([H])C([H])([H])C([H])([H])N3C([H])([H])C([H])([H])C([H])([H])C([H])([H])C3([H])[H])c(=O)n2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+2024-01-16 12:02:27,757 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-dd1b014b-78cf-4777-a9dd-35e4b18ff0aa
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2af499476ef0>, 6, '[H]c1nc([H])c(C([H])([H])c2nnnn2N2C([H])([H])C([H])([H])[C@]3([H])C([H])([H])N(C([H])([H])[H])C([H])([H])[C@]23[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:27,775 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-f477a198-b1c3-45f5-b362-bc347348e543
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2af499476ef0>, 6, '[H]c1nc([H])c([C@@]2([H])SC([H])([H])C(=O)N2c2nc3c([H])c([H])c([H])c([H])c3s2)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+slurmstepd: error: *** JOB 19761817 ON sb050 CANCELLED AT 2024-01-16T12:18:11 ***

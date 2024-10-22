@@ -1,0 +1,59 @@
+hostname sb051.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:34:c9:e0 brd ff:ff:ff:ff:ff:ff inet 10.3.81.131/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe34:c9e0/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c9:e1 brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c9:e2 brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c9:e3 brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f6:b0 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.131/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.93.131/22 brd 10.3.95.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::3abc:103:4c:f6b0/64 scope link valid_lft forever preferred_lft forever 7: ib1: <BROADCAST,MULTICAST> mtu 4092 qdisc noop state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f6:b1 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-24 12:26:22,914 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.131:46181'
+2024-01-24 12:26:42,389 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.131:36924
+2024-01-24 12:26:42,391 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.131:36924
+2024-01-24 12:26:42,391 - distributed.worker - INFO -           Worker name:            SLURMCluster-29
+2024-01-24 12:26:42,391 - distributed.worker - INFO -          dashboard at:          10.3.89.131:33821
+2024-01-24 12:26:42,391 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.11:43911
+2024-01-24 12:26:42,391 - distributed.worker - INFO - -------------------------------------------------
+2024-01-24 12:26:42,391 - distributed.worker - INFO -               Threads:                          2
+2024-01-24 12:26:42,391 - distributed.worker - INFO -                Memory:                  20.49 GiB
+2024-01-24 12:26:42,391 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-yioj070p
+2024-01-24 12:26:42,391 - distributed.worker - INFO - -------------------------------------------------
+2024-01-24 12:26:42,484 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.11:43911
+2024-01-24 12:26:42,484 - distributed.worker - INFO - -------------------------------------------------
+2024-01-24 12:26:42,485 - distributed.core - INFO - Starting established connection to tcp://10.3.88.11:43911
+2024-01-24 12:27:13,438 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 27)
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 27)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+2024-01-24 12:28:09,508 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-2ddc837d-caf5-4da3-a127-f1dfe28d70ba
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b76ec873400>, 6, '[H]c1nc([H])c(-n2nc(SC(F)(F)F)nc2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-b10/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: 'RuntimeError("Can\'t redefine method: forward on class: __torch__.torchani.aev.AEVComputer (of Python compilation unit at: 0x2b76f3fb70b0)")'
+
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 34 conformers. 
+Removed 4 conformers. 
+Generated 35 conformers. 
+Removed 34 conformers. 
+using ani2x
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+TIME changed dir: 0.0s
+Optimising conformer:   0%|                               | 0/1 [00:00<?, ?it/s][W BinaryOps.cpp:601] Warning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (function operator())
+2024-01-24 12:28:13,614 - distributed.utils_perf - INFO - full garbage collection released 10.75 MiB from 249915 reference cycles (threshold: 9.54 MiB)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Optimising conformer: 100%|███████████████████████| 1/1 [00:03<00:00,  3.98s/it]Optimising conformer: 100%|███████████████████████| 1/1 [00:03<00:00,  3.98s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-24 12:29:20,526 - distributed.nanny - INFO - Worker process 3929 was killed by signal 11
+2024-01-24 12:29:20,533 - distributed.nanny - WARNING - Restarting worker
+slurmstepd: error: *** JOB 19831150 ON sb051 CANCELLED AT 2024-01-24T12:29:37 ***

@@ -1,0 +1,564 @@
+hostname sb061.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:34:c9:80 brd ff:ff:ff:ff:ff:ff inet 10.3.81.141/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe34:c980/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c9:81 brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c9:82 brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c9:83 brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f3:90 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.141/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.93.141/22 brd 10.3.95.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::3abc:103:4c:f390/64 scope link valid_lft forever preferred_lft forever 7: ib1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 4092 qdisc pfifo_fast state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f3:91 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-18 22:05:23,534 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.141:42762'
+2024-01-18 22:05:23,613 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.141:33697'
+2024-01-18 22:05:46,437 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.141:33942
+2024-01-18 22:05:46,437 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.141:35811
+2024-01-18 22:05:46,442 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.141:33942
+2024-01-18 22:05:46,442 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.141:35811
+2024-01-18 22:05:46,442 - distributed.worker - INFO -           Worker name:         SLURMCluster-228-0
+2024-01-18 22:05:46,442 - distributed.worker - INFO -           Worker name:         SLURMCluster-228-1
+2024-01-18 22:05:46,442 - distributed.worker - INFO -          dashboard at:          10.3.89.141:33203
+2024-01-18 22:05:46,442 - distributed.worker - INFO -          dashboard at:          10.3.89.141:44447
+2024-01-18 22:05:46,443 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:42763
+2024-01-18 22:05:46,443 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:42763
+2024-01-18 22:05:46,443 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 22:05:46,443 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 22:05:46,443 - distributed.worker - INFO -               Threads:                          2
+2024-01-18 22:05:46,443 - distributed.worker - INFO -               Threads:                          2
+2024-01-18 22:05:46,443 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-18 22:05:46,443 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-18 22:05:46,443 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-cs1rpr_9
+2024-01-18 22:05:46,443 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-5a7rmfz2
+2024-01-18 22:05:46,443 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 22:05:46,443 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 22:05:46,525 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:42763
+2024-01-18 22:05:46,526 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 22:05:46,527 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:42763
+2024-01-18 22:05:46,529 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:42763
+2024-01-18 22:05:46,530 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 22:05:46,532 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:42763
+2024-01-18 22:46:27,366 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.185:44451
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.185:44451 after 30 s
+2024-01-18 22:46:59,734 - distributed.core - INFO - Event loop was unresponsive in Worker for 32.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-18 22:47:21,769 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-18 22:48:23,703 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.12s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 25 conformers. 
+Generated 14 conformers. 
+Removed 10 conformers. 
+Removed 9 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/4 [00:00<?, ?it/s][W BinaryOps.cpp:601] Warning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (function operator())
+2024-01-18 22:48:55,814 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.50s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Optimising conformer:  25%|█████▊                 | 1/4 [00:17<00:51, 17.11s/it]Optimising conformer:  50%|███████████▌           | 2/4 [00:26<00:25, 12.76s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                              | 0/16 [00:00<?, ?it/s][AOptimising conformer:  75%|█████████████████▎     | 3/4 [00:38<00:12, 12.46s/it]Optimising conformer: 100%|███████████████████████| 4/4 [00:50<00:00, 12.12s/it]Optimising conformer: 100%|███████████████████████| 4/4 [00:50<00:00, 12.63s/it]
+
+Optimising conformer:   6%|█▍                    | 1/16 [00:18<04:30, 18.00s/it][A
+Optimising conformer:  12%|██▊                   | 2/16 [00:30<03:24, 14.58s/it][A
+Optimising conformer:  19%|████▏                 | 3/16 [01:00<04:40, 21.57s/it][A
+Optimising conformer:  25%|█████▌                | 4/16 [01:10<03:24, 17.08s/it][A
+Optimising conformer:  31%|██████▉               | 5/16 [01:31<03:22, 18.41s/it][A2024-01-18 22:50:51,871 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+
+Optimising conformer:  38%|████████▎             | 6/16 [01:55<03:23, 20.31s/it][A
+Optimising conformer:  44%|█████████▋            | 7/16 [02:06<02:36, 17.35s/it][A
+Optimising conformer:  50%|███████████           | 8/16 [02:32<02:41, 20.15s/it][A
+Optimising conformer:  56%|████████████▍         | 9/16 [02:41<01:56, 16.66s/it][A
+Optimising conformer:  62%|█████████████▏       | 10/16 [03:09<02:00, 20.12s/it][A
+Optimising conformer:  69%|██████████████▍      | 11/16 [03:31<01:43, 20.80s/it][A
+Optimising conformer:  75%|███████████████▊     | 12/16 [03:55<01:26, 21.65s/it][A
+Optimising conformer:  81%|█████████████████    | 13/16 [04:17<01:05, 21.96s/it][A
+Optimising conformer:  88%|██████████████████▍  | 14/16 [04:26<00:36, 18.06s/it][A
+Optimising conformer:  94%|███████████████████▋ | 15/16 [04:49<00:19, 19.38s/it][A
+Optimising conformer: 100%|█████████████████████| 16/16 [04:58<00:00, 16.29s/it][AOptimising conformer: 100%|█████████████████████| 16/16 [04:58<00:00, 18.66s/it]
+2024-01-19 01:05:34,246 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.22s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 01:05:48,803 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.28s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 01:05:57,713 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 01:06:11,804 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.38s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 201.9s.
+TIME Completed the molecule generation in 527.5s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 38 conformers. 
+Generated 7 conformers. 
+Removed 4 conformers. 
+Removed 30 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/3 [00:00<?, ?it/s]Optimising conformer:  33%|███████▋               | 1/3 [00:11<00:23, 11.97s/it]Optimising conformer:  67%|███████████████▎       | 2/3 [00:20<00:10, 10.22s/it]Optimising conformer: 100%|███████████████████████| 3/3 [00:31<00:00, 10.56s/it]Optimising conformer: 100%|███████████████████████| 3/3 [00:31<00:00, 10.64s/it]
+2024-01-19 01:06:54,312 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.57s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]Optimising conformer:  12%|██▉                    | 1/8 [00:15<01:48, 15.44s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:44<02:19, 23.29s/it]Optimising conformer:  38%|████████▋              | 3/8 [01:07<01:55, 23.14s/it]Optimising conformer:  50%|███████████▌           | 4/8 [01:17<01:12, 18.17s/it]Optimising conformer:  62%|██████████████▍        | 5/8 [01:29<00:47, 15.76s/it]Optimising conformer:  75%|█████████████████▎     | 6/8 [01:56<00:39, 19.54s/it]Optimising conformer:  88%|████████████████████▏  | 7/8 [02:05<00:16, 16.10s/it]2024-01-19 01:09:56,323 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.29s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Optimising conformer: 100%|███████████████████████| 8/8 [02:47<00:00, 24.59s/it]Optimising conformer: 100%|███████████████████████| 8/8 [02:47<00:00, 20.99s/it]
+2024-01-19 01:10:04,609 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.39s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 01:10:09,635 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.81s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 01:13:49,253 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.58s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 132.5s.
+TIME changed dir: 0.0s
+Generated 21 conformers. 
+Removed 18 conformers. 
+TIME Completed the molecule generation in 344.6s.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/3 [00:00<?, ?it/s]Optimising conformer:  33%|███████▋               | 1/3 [00:15<00:30, 15.48s/it]Optimising conformer:  67%|███████████████▎       | 2/3 [00:28<00:14, 14.10s/it]Optimising conformer: 100%|███████████████████████| 3/3 [00:41<00:00, 13.62s/it]Optimising conformer: 100%|███████████████████████| 3/3 [00:41<00:00, 13.89s/it]
+2024-01-19 01:26:25,267 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 01:26:38,271 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.29s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 01:26:42,893 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.54s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 01:28:15,301 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.78s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 341.1s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 8 conformers. 
+Removed 6 conformers. 
+Generated 30 conformers. 
+Removed 18 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/12 [00:00<?, ?it/s]Optimising conformer:   8%|█▊                    | 1/12 [00:13<02:33, 13.96s/it]2024-01-19 01:28:54,849 - distributed.core - INFO - Event loop was unresponsive in Worker for 8.33s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Optimising conformer:  17%|███▋                  | 2/12 [00:32<02:47, 16.72s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/2 [00:00<?, ?it/s][AOptimising conformer:  25%|█████▌                | 3/12 [00:49<02:29, 16.64s/it]
+Optimising conformer:  50%|███████████▌           | 1/2 [00:15<00:15, 15.83s/it][AOptimising conformer:  33%|███████▎              | 4/12 [01:04<02:09, 16.14s/it]
+Optimising conformer: 100%|███████████████████████| 2/2 [00:26<00:00, 13.01s/it][AOptimising conformer: 100%|███████████████████████| 2/2 [00:26<00:00, 13.43s/it]
+Optimising conformer:  42%|█████████▏            | 5/12 [01:23<02:00, 17.17s/it]Optimising conformer:  50%|███████████           | 6/12 [01:40<01:43, 17.18s/it]Optimising conformer:  58%|████████████▊         | 7/12 [02:00<01:29, 17.94s/it]Optimising conformer:  67%|██████████████▋       | 8/12 [02:15<01:07, 16.95s/it]Optimising conformer:  75%|████████████████▌     | 9/12 [02:26<00:45, 15.24s/it]Optimising conformer:  83%|█████████████████▌   | 10/12 [02:37<00:27, 13.92s/it]Optimising conformer:  92%|███████████████████▎ | 11/12 [02:51<00:13, 13.92s/it]Optimising conformer: 100%|█████████████████████| 12/12 [03:03<00:00, 13.31s/it]Optimising conformer: 100%|█████████████████████| 12/12 [03:03<00:00, 15.28s/it]
+2024-01-19 01:43:31,838 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.10s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 01:43:40,335 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.32s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 01:43:46,384 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.55s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 01:43:51,271 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.86s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 01:44:28,357 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 255.4s.
+TIME Completed the molecule generation in 383.9s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 38 conformers. 
+Removed 24 conformers. 
+Generated 33 conformers. 
+Removed 20 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/14 [00:00<?, ?it/s]Optimising conformer:   7%|█▌                    | 1/14 [00:10<02:11, 10.13s/it]Optimising conformer:  14%|███▏                  | 2/14 [00:18<01:46,  8.87s/it]Optimising conformer:  21%|████▋                 | 3/14 [00:29<01:50, 10.06s/it]2024-01-19 01:45:15,102 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Optimising conformer:  29%|██████▎               | 4/14 [00:41<01:47, 10.79s/it]Optimising conformer:  36%|███████▊              | 5/14 [00:56<01:50, 12.32s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                              | 0/13 [00:00<?, ?it/s][AOptimising conformer:  43%|█████████▍            | 6/14 [01:05<01:28, 11.09s/it]Optimising conformer:  50%|███████████           | 7/14 [01:16<01:18, 11.22s/it]
+Optimising conformer:   8%|█▋                    | 1/13 [00:23<04:45, 23.78s/it][A
+Optimising conformer:  15%|███▍                  | 2/13 [00:32<02:44, 14.99s/it][AOptimising conformer:  57%|████████████▌         | 8/14 [01:34<01:19, 13.23s/it]
+Optimising conformer:  23%|█████                 | 3/13 [00:49<02:36, 15.66s/it][AOptimising conformer:  64%|██████████████▏       | 9/14 [01:52<01:13, 14.76s/it]
+Optimising conformer:  31%|██████▊               | 4/13 [00:57<01:56, 12.97s/it][A
+Optimising conformer:  38%|████████▍             | 5/13 [01:09<01:40, 12.52s/it][AOptimising conformer:  71%|███████████████      | 10/14 [02:11<01:04, 16.20s/it]
+Optimising conformer:  46%|██████████▏           | 6/13 [01:25<01:35, 13.69s/it][A
+Optimising conformer:  54%|███████████▊          | 7/13 [01:34<01:12, 12.09s/it][A
+Optimising conformer:  62%|█████████████▌        | 8/13 [01:43<00:55, 11.03s/it][AOptimising conformer:  79%|████████████████▌    | 11/14 [02:52<01:11, 23.77s/it]Optimising conformer:  86%|██████████████████   | 12/14 [03:04<00:40, 20.01s/it]
+Optimising conformer:  69%|███████████████▏      | 9/13 [02:12<01:07, 16.84s/it][AOptimising conformer:  93%|███████████████████▌ | 13/14 [03:15<00:17, 17.42s/it]
+Optimising conformer:  77%|████████████████▏    | 10/13 [02:29<00:50, 16.69s/it][AOptimising conformer: 100%|█████████████████████| 14/14 [03:27<00:00, 15.61s/it]Optimising conformer: 100%|█████████████████████| 14/14 [03:27<00:00, 14.79s/it]
+
+Optimising conformer:  85%|█████████████████▊   | 11/13 [02:52<00:37, 18.60s/it][A
+Optimising conformer:  92%|███████████████████▍ | 12/13 [03:16<00:20, 20.50s/it][A
+Optimising conformer: 100%|█████████████████████| 13/13 [03:32<00:00, 19.01s/it][AOptimising conformer: 100%|█████████████████████| 13/13 [03:32<00:00, 16.34s/it]
+2024-01-19 02:01:12,904 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 02:01:17,535 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 02:01:21,728 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 02:01:27,093 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.71s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 02:01:32,703 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.92s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 02:02:22,993 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 419.0s.
+TIME Completed the molecule generation in 430.6s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 12 conformers. 
+Removed 8 conformers. 
+Generated 24 conformers. 
+Removed 18 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/4 [00:00<?, ?it/s]Optimising conformer:  25%|█████▊                 | 1/4 [00:08<00:26,  8.95s/it]2024-01-19 02:02:56,037 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.66s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Optimising conformer:  50%|███████████▌           | 2/4 [00:27<00:29, 14.76s/it]Optimising conformer:  75%|█████████████████▎     | 3/4 [00:36<00:11, 11.88s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/6 [00:00<?, ?it/s][AOptimising conformer: 100%|███████████████████████| 4/4 [00:44<00:00, 10.36s/it]Optimising conformer: 100%|███████████████████████| 4/4 [00:44<00:00, 11.07s/it]
+
+Optimising conformer:  17%|███▊                   | 1/6 [00:17<01:28, 17.70s/it][A
+Optimising conformer:  33%|███████▋               | 2/6 [00:30<00:59, 14.83s/it][A
+Optimising conformer:  50%|███████████▌           | 3/6 [00:40<00:38, 12.69s/it][A
+Optimising conformer:  67%|███████████████▎       | 4/6 [00:50<00:23, 11.68s/it][A
+Optimising conformer:  83%|███████████████████▏   | 5/6 [01:07<00:13, 13.66s/it][A
+Optimising conformer: 100%|███████████████████████| 6/6 [01:18<00:00, 12.46s/it][AOptimising conformer: 100%|███████████████████████| 6/6 [01:18<00:00, 13.02s/it]
+2024-01-19 02:18:38,597 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 02:18:48,103 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.59s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 02:18:49,055 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-7119b48e-2270-4ee1-9916-4745ad472e90
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1ac46402c0>, 6, '[H]c1nc([H])c(-n2c([H])c([H])n3nc(-c4c([H])c([H])c(C(C([H])([H])[H])(C([H])([H])[H])C([H])([H])[H])c([H])c4[H])c([H])c23)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+2024-01-19 02:19:29,300 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.10s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 157.0s.
+TIME Completed the molecule generation in 234.3s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 25 conformers. 
+Removed 16 conformers. 
+Generated 45 conformers. 
+Removed 45 conformers. 
+Warning: no conformers so cannot optimise_in_receptor. Ignoring.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/9 [00:00<?, ?it/s]Optimising conformer:  11%|██▌                    | 1/9 [00:21<02:52, 21.59s/it]Optimising conformer:  22%|█████                  | 2/9 [00:33<01:52, 16.08s/it]Optimising conformer:  33%|███████▋               | 3/9 [00:55<01:52, 18.73s/it]Optimising conformer:  44%|██████████▏            | 4/9 [01:05<01:16, 15.32s/it]Optimising conformer:  56%|████████████▊          | 5/9 [01:27<01:11, 17.80s/it]Optimising conformer:  67%|███████████████▎       | 6/9 [01:35<00:43, 14.45s/it]Optimising conformer:  78%|█████████████████▉     | 7/9 [01:54<00:31, 15.77s/it]Optimising conformer:  89%|████████████████████▍  | 8/9 [02:02<00:13, 13.27s/it]Optimising conformer: 100%|███████████████████████| 9/9 [02:10<00:00, 11.61s/it]Optimising conformer: 100%|███████████████████████| 9/9 [02:10<00:00, 14.48s/it]
+2024-01-19 03:35:52,610 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 03:36:03,589 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 03:36:08,872 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.35s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 03:36:13,227 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.42s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 03:37:00,806 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.19s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 03:37:16,246 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.56s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 223.8s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 15 conformers. 
+Removed 11 conformers. 
+Generated 25 conformers. 
+Removed 23 conformers. 
+using ani2x
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/4 [00:00<?, ?it/s]2024-01-19 03:37:36,276 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.88s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+
+Optimising conformer:   0%|                               | 0/2 [00:00<?, ?it/s][AOptimising conformer:  25%|█████▊                 | 1/4 [00:33<01:41, 33.71s/it]Optimising conformer:  50%|███████████▌           | 2/4 [00:57<00:55, 27.66s/it]
+Optimising conformer:  50%|███████████▌           | 1/2 [00:58<00:58, 58.64s/it][A
+Optimising conformer: 100%|███████████████████████| 2/2 [01:31<00:00, 43.35s/it][AOptimising conformer: 100%|███████████████████████| 2/2 [01:31<00:00, 45.65s/it]
+2024-01-19 03:39:09,644 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-965d8435-5d81-4cc2-b7c5-09ac329205c4
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b1abb472e50>, 6, '[H]c1nc([H])c(N2C([H])([H])[C@@]3([H])[C@@]([H])(C([H])([H])c4c([H])c([H])c(C(F)(F)F)c([H])c4[H])[C@@]3([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+Optimising conformer:  75%|█████████████████▎     | 3/4 [01:42<00:35, 35.58s/it]Optimising conformer: 100%|███████████████████████| 4/4 [01:58<00:00, 28.15s/it]Optimising conformer: 100%|███████████████████████| 4/4 [01:58<00:00, 29.72s/it]
+2024-01-19 03:57:21,292 - distributed.core - INFO - Event loop was unresponsive in Worker for 8.77s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 03:57:30,432 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.42s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 03:58:08,328 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.70s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 03:58:19,489 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 03:58:38,534 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.62s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 250.2s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 16 conformers. 
+Removed 7 conformers. 
+Generated 35 conformers. 
+Removed 30 conformers. 
+using ani2x
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]
+Optimising conformer:   0%|                               | 0/9 [00:00<?, ?it/s][A
+Optimising conformer:  11%|██▌                    | 1/9 [00:25<03:26, 25.77s/it][A
+Optimising conformer:  22%|█████                  | 2/9 [00:42<02:21, 20.25s/it][AOptimising conformer:  20%|████▌                  | 1/5 [00:54<03:39, 54.95s/it]
+Optimising conformer:  33%|███████▋               | 3/9 [00:55<01:43, 17.18s/it][AOptimising conformer:  40%|█████████▏             | 2/5 [01:09<01:34, 31.43s/it]
+Optimising conformer:  44%|██████████▏            | 4/9 [01:19<01:39, 19.97s/it][AOptimising conformer:  60%|█████████████▊         | 3/5 [01:25<00:48, 24.13s/it]Optimising conformer:  80%|██████████████████▍    | 4/5 [02:02<00:29, 29.26s/it]Optimising conformer: 100%|███████████████████████| 5/5 [02:28<00:00, 28.06s/it]Optimising conformer: 100%|███████████████████████| 5/5 [02:28<00:00, 29.69s/it]
+
+Optimising conformer:  56%|████████████▊          | 5/9 [02:47<02:57, 44.46s/it][A
+Optimising conformer:  67%|███████████████▎       | 6/9 [02:57<01:38, 32.79s/it][A
+Optimising conformer:  78%|█████████████████▉     | 7/9 [03:17<00:56, 28.36s/it][A
+Optimising conformer:  89%|████████████████████▍  | 8/9 [03:36<00:25, 25.49s/it][A
+Optimising conformer: 100%|███████████████████████| 9/9 [03:53<00:00, 22.84s/it][AOptimising conformer: 100%|███████████████████████| 9/9 [03:53<00:00, 25.95s/it]
+2024-01-19 04:17:32,543 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.51s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 04:17:44,803 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.78s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 04:17:49,059 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 04:19:03,389 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.80s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 04:19:11,604 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-19 04:19:12,099 - distributed.core - INFO - Event loop was unresponsive in Worker for 8.54s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 04:19:38,655 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+TIME Completed the molecule generation in 277.2s.
+TIME Completed the molecule generation in 364.9s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 48 conformers. 
+Generated 44 conformers. 
+Removed 45 conformers. 
+Removed 31 conformers. 
+using ani2x
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/13 [00:00<?, ?it/s]
+Optimising conformer:   0%|                               | 0/3 [00:00<?, ?it/s]2024-01-19 04:19:39,883 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+[A
+Optimising conformer:  33%|███████▋               | 1/3 [00:14<00:28, 14.38s/it][AOptimising conformer:   8%|█▋                    | 1/13 [00:15<03:02, 15.19s/it]Optimising conformer:  15%|███▍                  | 2/13 [00:37<03:34, 19.46s/it]
+Optimising conformer:  67%|███████████████▎       | 2/3 [00:43<00:23, 23.09s/it][AOptimising conformer:  23%|█████                 | 3/13 [00:48<02:36, 15.66s/it]
+Optimising conformer: 100%|███████████████████████| 3/3 [00:55<00:00, 17.96s/it][AOptimising conformer: 100%|███████████████████████| 3/3 [00:55<00:00, 18.47s/it]
+Optimising conformer:  31%|██████▊               | 4/13 [01:04<02:21, 15.72s/it]Optimising conformer:  38%|████████▍             | 5/13 [01:16<01:55, 14.39s/it]Optimising conformer:  46%|██████████▏           | 6/13 [01:31<01:42, 14.63s/it]Optimising conformer:  54%|███████████▊          | 7/13 [02:25<02:45, 27.58s/it]Optimising conformer:  62%|█████████████▌        | 8/13 [02:36<01:51, 22.22s/it]Optimising conformer:  69%|███████████████▏      | 9/13 [03:07<01:39, 24.78s/it]Optimising conformer:  77%|████████████████▏    | 10/13 [03:47<01:28, 29.61s/it]Optimising conformer:  85%|█████████████████▊   | 11/13 [03:56<00:46, 23.16s/it]Optimising conformer:  92%|███████████████████▍ | 12/13 [04:09<00:20, 20.22s/it]Optimising conformer: 100%|█████████████████████| 13/13 [04:17<00:00, 16.58s/it]Optimising conformer: 100%|█████████████████████| 13/13 [04:17<00:00, 19.83s/it]
+2024-01-19 05:38:06,446 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.61s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 05:38:12,951 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 05:38:16,643 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2024-01-19 05:38:16,921 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.39s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 05:38:20,845 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2024-01-19 05:38:20,896 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.87s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 05:38:47,504 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2024-01-19 05:38:47,531 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.14s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 225.1s.
+TIME Completed the molecule generation in 416.2s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 19 conformers. 
+Generated 22 conformers. 
+Removed 10 conformers. 
+Removed 15 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/9 [00:00<?, ?it/s]2024-01-19 05:39:18,626 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.60s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 05:39:18,628 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+Optimising conformer:  11%|██▌                    | 1/9 [00:16<02:09, 16.21s/it]Optimising conformer:  22%|█████                  | 2/9 [00:29<01:40, 14.34s/it]2024-01-19 05:39:48,337 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2024-01-19 05:39:48,341 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Optimising conformer:  33%|███████▋               | 3/9 [00:46<01:33, 15.52s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/7 [00:00<?, ?it/s][AOptimising conformer:  44%|██████████▏            | 4/9 [01:13<01:40, 20.10s/it]Optimising conformer:  56%|████████████▊          | 5/9 [01:28<01:13, 18.43s/it]Optimising conformer:  67%|███████████████▎       | 6/9 [01:43<00:51, 17.15s/it]Optimising conformer:  78%|█████████████████▉     | 7/9 [01:57<00:32, 16.30s/it]Optimising conformer:  89%|████████████████████▍  | 8/9 [02:12<00:15, 15.77s/it]Optimising conformer: 100%|███████████████████████| 9/9 [02:25<00:00, 14.94s/it]Optimising conformer: 100%|███████████████████████| 9/9 [02:25<00:00, 16.19s/it]
+
+Optimising conformer:  14%|███▏                  | 1/7 [08:55<53:31, 535.30s/it][A
+Optimising conformer:  29%|██████▎               | 2/7 [09:17<19:27, 233.49s/it][A
+Optimising conformer:  43%|█████████▍            | 3/7 [09:39<09:08, 137.01s/it][A
+Optimising conformer:  57%|████████████▌         | 4/7 [19:22<15:39, 313.16s/it][A
+Optimising conformer:  71%|███████████████▋      | 5/7 [19:37<06:51, 205.56s/it][A
+Optimising conformer:  86%|██████████████████▊   | 6/7 [20:03<02:24, 144.61s/it][A
+Optimising conformer: 100%|██████████████████████| 7/7 [20:18<00:00, 102.16s/it][AOptimising conformer: 100%|██████████████████████| 7/7 [20:18<00:00, 174.11s/it]
+2024-01-19 06:15:36,644 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.78s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 06:15:36,646 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 06:15:40,413 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2024-01-19 06:17:37,174 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.21s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 06:17:37,176 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2024-01-19 06:17:47,038 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.22s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 06:17:47,040 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+TIME Completed the molecule generation in 263.0s.
+TIME Completed the molecule generation in 1361.9s.
+TIME changed dir: 0.0s
+Generated 22 conformers. 
+Removed 10 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/12 [00:00<?, ?it/s]Optimising conformer:   8%|█▊                    | 1/12 [00:12<02:14, 12.27s/it]Optimising conformer:  17%|███▋                  | 2/12 [00:41<03:42, 22.27s/it]Optimising conformer:  25%|█████▌                | 3/12 [01:07<03:33, 23.73s/it]Optimising conformer:  33%|███████▎              | 4/12 [01:28<03:03, 22.91s/it]Optimising conformer:  42%|█████████▏            | 5/12 [01:42<02:17, 19.71s/it]Optimising conformer:  50%|███████████           | 6/12 [01:59<01:52, 18.71s/it]Optimising conformer:  58%|████████████▊         | 7/12 [02:13<01:25, 17.19s/it]Optimising conformer:  67%|██████████████▋       | 8/12 [02:41<01:22, 20.53s/it]Optimising conformer:  75%|████████████████▌     | 9/12 [02:51<00:52, 17.35s/it]Optimising conformer:  83%|█████████████████▌   | 10/12 [03:16<00:39, 19.82s/it]Optimising conformer:  92%|███████████████████▎ | 11/12 [03:33<00:18, 18.88s/it]Optimising conformer: 100%|█████████████████████| 12/12 [04:07<00:00, 23.49s/it]Optimising conformer: 100%|█████████████████████| 12/12 [04:07<00:00, 20.64s/it]
+2024-01-19 06:28:06,267 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 07:00:49,407 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 07:10:26,438 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2024-01-19 07:10:26,456 - distributed.core - INFO - Event loop was unresponsive in Worker for 12.34s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 07:36:12,911 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.53s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-19 07:36:12,939 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-19 07:42:38,208 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.19s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME Completed the molecule generation in 411.8s.
+TIME changed dir: 0.0s
+Generated 17 conformers. 
+Removed 12 conformers. 
+Using force field
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:00<00:01,  2.48it/s]Optimising conformer:  40%|█████████▏             | 2/5 [00:00<00:01,  2.40it/s]Optimising conformer:  60%|█████████████▊         | 3/5 [00:01<00:01,  1.93it/s]Optimising conformer:  80%|██████████████████▍    | 4/5 [00:02<00:00,  1.72it/s]Optimising conformer: 100%|███████████████████████| 5/5 [00:03<00:00,  1.44it/s]Optimising conformer: 100%|███████████████████████| 5/5 [00:03<00:00,  1.64it/s]
+2024-01-19 09:24:31,623 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+TimeoutError: [Errno 110] Connection timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 1237, in heartbeat
+    response = await retry_operation(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1227, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 986, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://10.3.89.141:57552 remote=tcp://10.3.88.12:42763>: TimeoutError: [Errno 110] Connection timed out
+2024-01-19 09:24:31,623 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/tornado/iostream.py", line 861, in _read_to_buffer
+    bytes_read = self.read_from_fd(buf)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/tornado/iostream.py", line 1116, in read_from_fd
+    return self.socket.recv_into(buf, len(buf))
+TimeoutError: [Errno 110] Connection timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 1237, in heartbeat
+    response = await retry_operation(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1227, in send_recv_from_rpc
+    return await send_recv(comm=comm, op=key, **kwargs)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 986, in send_recv
+    response = await comm.read(deserializers=deserializers)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 241, in read
+    convert_stream_closed_error(self, e)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 142, in convert_stream_closed_error
+    raise CommClosedError(f"in {obj}: {exc.__class__.__name__}: {exc}") from exc
+distributed.comm.core.CommClosedError: in <TCP (closed) ConnectionPool.heartbeat_worker local=tcp://10.3.89.141:57554 remote=tcp://10.3.88.12:42763>: TimeoutError: [Errno 110] Connection timed out
+2024-01-19 09:24:38,151 - distributed.core - INFO - Connection to tcp://10.3.88.12:42763 has been closed.
+2024-01-19 09:24:38,154 - distributed.worker - INFO - Stopping worker at tcp://10.3.89.141:35811. Reason: worker-handle-scheduler-connection-broken
+2024-01-19 09:24:38,151 - distributed.core - INFO - Connection to tcp://10.3.88.12:42763 has been closed.
+2024-01-19 09:24:38,155 - distributed.worker - INFO - Stopping worker at tcp://10.3.89.141:33942. Reason: worker-handle-scheduler-connection-broken
+2024-01-19 09:24:38,162 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://10.3.89.141:33697'. Reason: worker-handle-scheduler-connection-broken
+2024-01-19 09:24:38,164 - distributed.nanny - INFO - Closing Nanny gracefully at 'tcp://10.3.89.141:42762'. Reason: worker-handle-scheduler-connection-broken
+2024-01-19 09:24:38,199 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 291, in connect
+    comm = await asyncio.wait_for(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 466, in wait_for
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 1237, in heartbeat
+    response = await retry_operation(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1224, in send_recv_from_rpc
+    comm = await self.pool.connect(self.addr)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1412, in _connect
+    raise CommClosedError(reason)
+distributed.comm.core.CommClosedError: ConnectionPool closing.
+2024-01-19 09:24:38,218 - distributed.nanny - INFO - Worker closed
+2024-01-19 09:24:38,207 - distributed.worker - ERROR - Failed to communicate with scheduler during heartbeat.
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 291, in connect
+    comm = await asyncio.wait_for(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 466, in wait_for
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 1237, in heartbeat
+    response = await retry_operation(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/utils_comm.py", line 434, in retry_operation
+    return await retry(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/utils_comm.py", line 413, in retry
+    return await coro()
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1224, in send_recv_from_rpc
+    comm = await self.pool.connect(self.addr)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1412, in _connect
+    raise CommClosedError(reason)
+distributed.comm.core.CommClosedError: ConnectionPool closing.
+2024-01-19 09:24:38,257 - distributed.nanny - INFO - Worker closed
+2024-01-19 09:24:40,241 - distributed.nanny - ERROR - Worker process died unexpectedly
+TIME Completed the molecule generation in 167.4s.
+2024-01-19 09:24:40,267 - distributed.nanny - ERROR - Worker process died unexpectedly
+2024-01-19 09:24:45,608 - distributed.nanny - INFO - Closing Nanny at 'tcp://10.3.89.141:33697'. Reason: nanny-close-gracefully
+2024-01-19 09:24:53,580 - distributed.nanny - INFO - Closing Nanny at 'tcp://10.3.89.141:42762'. Reason: nanny-close-gracefully
+2024-01-19 09:24:53,582 - distributed.dask_worker - INFO - End worker

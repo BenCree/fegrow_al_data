@@ -1,0 +1,304 @@
+hostname sb062.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:74:c8:e8 brd ff:ff:ff:ff:ff:ff inet 10.3.81.142/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe74:c8e8/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:e9 brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:ea brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:eb brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:70:79:90:03:00:50:5d:a3 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.142/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.97.142/22 brd 10.3.99.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::7279:9003:50:5da3/64 scope link valid_lft forever preferred_lft forever 7: ib1: <BROADCAST,MULTICAST> mtu 4092 qdisc noop state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:70:79:90:03:00:50:5d:a4 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-29 02:30:41,737 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.142:40562'
+2024-01-29 02:30:53,879 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.142:36228
+2024-01-29 02:30:53,882 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.142:36228
+2024-01-29 02:30:53,882 - distributed.worker - INFO -           Worker name:           SLURMCluster-329
+2024-01-29 02:30:53,882 - distributed.worker - INFO -          dashboard at:          10.3.89.142:39678
+2024-01-29 02:30:53,882 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.11:44532
+2024-01-29 02:30:53,882 - distributed.worker - INFO - -------------------------------------------------
+2024-01-29 02:30:53,882 - distributed.worker - INFO -               Threads:                          2
+2024-01-29 02:30:53,882 - distributed.worker - INFO -                Memory:                  20.49 GiB
+2024-01-29 02:30:53,882 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-njx581_t
+2024-01-29 02:30:53,882 - distributed.worker - INFO - -------------------------------------------------
+2024-01-29 02:30:53,967 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.11:44532
+2024-01-29 02:30:53,967 - distributed.worker - INFO - -------------------------------------------------
+2024-01-29 02:30:53,967 - distributed.core - INFO - Starting established connection to tcp://10.3.88.11:44532
+2024-01-29 02:31:51,768 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 02:52:40,201 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.142:34823
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.142:34823 after 30 s
+2024-01-29 02:52:40,223 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.129:46774
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.129:46774 after 30 s
+2024-01-29 02:53:11,997 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.129:46774
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.129:46774 after 30 s
+2024-01-29 02:53:33,021 - distributed.core - INFO - Event loop was unresponsive in Worker for 18.87s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 02:53:33,021 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 18.87s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+2024-01-29 02:54:10,447 [WARNING] [__init__.py:5] root: Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 8 conformers. 
+Removed 3 conformers. 
+Generated 42 conformers. 
+Removed 32 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/10 [00:00<?, ?it/s][W BinaryOps.cpp:601] Warning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (function operator())
+Optimising conformer:  10%|██▏                   | 1/10 [00:05<00:46,  5.19s/it]Optimising conformer:  20%|████▍                 | 2/10 [00:07<00:27,  3.46s/it]Optimising conformer:  30%|██████▌               | 3/10 [00:10<00:22,  3.22s/it]Optimising conformer:  40%|████████▊             | 4/10 [00:12<00:15,  2.60s/it]Optimising conformer:  50%|███████████           | 5/10 [00:13<00:11,  2.37s/it]Optimising conformer:  60%|█████████████▏        | 6/10 [00:15<00:08,  2.17s/it]Optimising conformer:  70%|███████████████▍      | 7/10 [00:17<00:05,  1.90s/it]Optimising conformer:  80%|█████████████████▌    | 8/10 [00:22<00:06,  3.10s/it]Optimising conformer:  90%|███████████████████▊  | 9/10 [00:25<00:03,  3.04s/it]Optimising conformer: 100%|█████████████████████| 10/10 [00:28<00:00,  2.99s/it]Optimising conformer: 100%|█████████████████████| 10/10 [00:28<00:00,  2.86s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-plip/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+TIME Completed the molecule generation in 77.0s.
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:03<00:12,  3.06s/it]Optimising conformer:  40%|█████████▏             | 2/5 [00:04<00:06,  2.28s/it]Optimising conformer:  60%|█████████████▊         | 3/5 [00:06<00:03,  1.87s/it]Optimising conformer:  80%|██████████████████▍    | 4/5 [00:08<00:01,  1.98s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:09<00:00,  1.67s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:09<00:00,  1.89s/it]
+2024-01-29 03:12:32,666 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.92s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 03:12:32,666 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 3.92s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 03:12:55,445 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.65s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 03:12:55,445 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 3.65s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 03:33:37,299 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 1)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-29 03:33:41,222 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 1)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 90.1s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 25 conformers. 
+Removed 14 conformers. 
+Generated 41 conformers. 
+Removed 33 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/11 [00:00<?, ?it/s]Optimising conformer:   9%|██                    | 1/11 [00:09<01:30,  9.05s/it]Optimising conformer:  18%|████                  | 2/11 [00:20<01:31, 10.22s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s][AOptimising conformer:  27%|██████                | 3/11 [00:39<01:54, 14.25s/it]Optimising conformer:  36%|████████              | 4/11 [00:43<01:12, 10.42s/it]Optimising conformer:  45%|██████████            | 5/11 [00:46<00:45,  7.61s/it]Optimising conformer:  55%|████████████          | 6/11 [00:48<00:28,  5.79s/it]Optimising conformer:  64%|██████████████        | 7/11 [00:55<00:24,  6.20s/it]Optimising conformer:  73%|████████████████      | 8/11 [01:00<00:16,  5.64s/it]Optimising conformer:  82%|██████████████████    | 9/11 [01:02<00:09,  4.65s/it]Optimising conformer:  91%|███████████████████  | 10/11 [01:08<00:04,  4.91s/it]Optimising conformer: 100%|█████████████████████| 11/11 [01:13<00:00,  4.99s/it]Optimising conformer: 100%|█████████████████████| 11/11 [01:13<00:00,  6.66s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-plip/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+
+Optimising conformer:  12%|██▊                   | 1/8 [02:02<14:15, 122.25s/it][A
+Optimising conformer:  25%|█████▊                 | 2/8 [02:04<05:11, 51.88s/it][A
+Optimising conformer:  38%|████████▋              | 3/8 [02:18<02:52, 34.46s/it][A
+Optimising conformer:  50%|███████████▌           | 4/8 [02:20<01:26, 21.71s/it][A
+Optimising conformer:  62%|██████████████▍        | 5/8 [02:24<00:45, 15.24s/it][A
+Optimising conformer:  75%|█████████████████▎     | 6/8 [02:27<00:22, 11.03s/it][A
+Optimising conformer:  88%|████████████████████▏  | 7/8 [03:07<00:20, 20.55s/it][A
+Optimising conformer: 100%|███████████████████████| 8/8 [03:17<00:00, 17.12s/it][AOptimising conformer: 100%|███████████████████████| 8/8 [03:17<00:00, 24.66s/it]
+2024-01-29 04:00:36,438 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.78s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 04:00:36,438 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 3.78s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 04:22:02,775 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-29 04:22:06,014 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 131.4s.
+TIME Completed the molecule generation in 282.0s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 13 conformers. 
+Removed 8 conformers. 
+Generated 19 conformers. 
+Removed 11 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:04<00:16,  4.11s/it]Optimising conformer:  40%|█████████▏             | 2/5 [00:08<00:12,  4.32s/it]Optimising conformer:  60%|█████████████▊         | 3/5 [00:12<00:08,  4.01s/it]Optimising conformer:  80%|██████████████████▍    | 4/5 [00:15<00:03,  3.58s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:18<00:00,  3.64s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:18<00:00,  3.78s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-plip/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+2024-01-29 04:23:18,413 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 1)
+ - Atom C (index 5)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-29 04:23:20,921 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 1)
+ - Atom C (index 5)
+
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+TIME Completed the molecule generation in 74.2s.
+TIME changed dir: 0.0s
+Generated 43 conformers. 
+Removed 35 conformers. 
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]Optimising conformer:  12%|██▉                    | 1/8 [00:04<00:33,  4.75s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:11<00:36,  6.02s/it]Optimising conformer:  38%|████████▋              | 3/8 [00:15<00:25,  5.08s/it]Optimising conformer:  50%|███████████▌           | 4/8 [00:17<00:15,  3.92s/it]Optimising conformer:  62%|██████████████▍        | 5/8 [00:20<00:10,  3.34s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s][A
+Optimising conformer:  12%|██▉                    | 1/8 [00:05<00:38,  5.47s/it][A
+Optimising conformer:  25%|█████▊                 | 2/8 [00:09<00:28,  4.83s/it][A
+Optimising conformer:  38%|████████▋              | 3/8 [00:14<00:24,  4.97s/it][A
+Optimising conformer:  50%|███████████▌           | 4/8 [00:18<00:16,  4.22s/it][A
+Optimising conformer:  62%|██████████████▍        | 5/8 [00:22<00:12,  4.16s/it][A
+Optimising conformer:  75%|█████████████████▎     | 6/8 [00:26<00:08,  4.11s/it][A
+Optimising conformer:  88%|████████████████████▏  | 7/8 [00:37<00:06,  6.43s/it][A
+Optimising conformer: 100%|███████████████████████| 8/8 [00:40<00:00,  5.45s/it][AOptimising conformer: 100%|███████████████████████| 8/8 [00:40<00:00,  5.09s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-plip/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+Optimising conformer:  75%|█████████████████▎     | 6/8 [02:07<01:17, 38.82s/it]Optimising conformer:  88%|████████████████████▏  | 7/8 [02:09<00:26, 26.69s/it]Optimising conformer: 100%|███████████████████████| 8/8 [02:17<00:00, 20.61s/it]Optimising conformer: 100%|███████████████████████| 8/8 [02:17<00:00, 17.14s/it]
+2024-01-29 04:44:54,106 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-29 04:44:54,106 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-29 05:07:02,570 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom N (index 1)
+ - Atom C (index 8)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-29 05:07:04,467 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom N (index 1)
+ - Atom C (index 8)
+
+TIME Completed the molecule generation in 138.5s.
+TIME Completed the molecule generation in 226.8s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 24 conformers. 
+Removed 17 conformers. 
+Generated 50 conformers. 
+Removed 42 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/7 [00:00<?, ?it/s]Optimising conformer:  14%|███▎                   | 1/7 [00:04<00:25,  4.27s/it]Optimising conformer:  29%|██████▌                | 2/7 [00:07<00:18,  3.67s/it]Optimising conformer:  43%|█████████▊             | 3/7 [00:09<00:10,  2.73s/it]Optimising conformer:  57%|█████████████▏         | 4/7 [00:10<00:06,  2.28s/it]Optimising conformer:  71%|████████████████▍      | 5/7 [00:13<00:05,  2.58s/it]Optimising conformer:  86%|███████████████████▋   | 6/7 [00:18<00:03,  3.13s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:19<00:00,  2.61s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:19<00:00,  2.80s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-plip/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 72.0s.
+TIME changed dir: 0.0s
+Generated 10 conformers. 
+Removed 5 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:03<00:15,  3.97s/it]failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s][AOptimising conformer:  40%|█████████▏             | 2/5 [00:07<00:10,  3.45s/it]
+Optimising conformer:  12%|██▉                    | 1/8 [00:03<00:25,  3.58s/it][AOptimising conformer:  60%|█████████████▊         | 3/5 [00:12<00:08,  4.41s/it]
+Optimising conformer:  25%|█████▊                 | 2/8 [00:08<00:26,  4.44s/it][AOptimising conformer:  80%|██████████████████▍    | 4/5 [00:14<00:03,  3.56s/it]
+Optimising conformer:  38%|████████▋              | 3/8 [00:11<00:19,  3.93s/it][AOptimising conformer: 100%|███████████████████████| 5/5 [00:18<00:00,  3.59s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:18<00:00,  3.71s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-plip/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+
+Optimising conformer:  50%|███████████▌           | 4/8 [00:16<00:16,  4.09s/it][A
+Optimising conformer:  62%|██████████████▍        | 5/8 [00:20<00:12,  4.14s/it][A
+Optimising conformer:  75%|█████████████████▎     | 6/8 [00:36<00:16,  8.29s/it][A
+Optimising conformer:  88%|████████████████████▏  | 7/8 [00:38<00:06,  6.28s/it][A
+Optimising conformer: 100%|███████████████████████| 8/8 [00:44<00:00,  6.09s/it][AOptimising conformer: 100%|███████████████████████| 8/8 [00:44<00:00,  5.59s/it]
+slurmstepd: error: *** JOB 19877692 ON sb062 CANCELLED AT 2024-01-29T05:30:06 ***

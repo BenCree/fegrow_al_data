@@ -1,0 +1,992 @@
+hostname sb042.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:74:c8:f0 brd ff:ff:ff:ff:ff:ff inet 10.3.81.122/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe74:c8f0/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:f1 brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:f2 brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:74:c8:f3 brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f6:90 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.122/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.97.122/22 brd 10.3.99.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::3abc:103:4c:f690/64 scope link valid_lft forever preferred_lft forever 7: ib1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 4092 qdisc pfifo_fast state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f6:91 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-16 11:48:21,238 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.122:38217'
+2024-01-16 11:48:21,405 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.122:34013'
+2024-01-16 11:49:30,469 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.122:39675
+2024-01-16 11:49:30,469 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.122:43078
+2024-01-16 11:49:30,470 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.122:39675
+2024-01-16 11:49:30,470 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.122:43078
+2024-01-16 11:49:30,470 - distributed.worker - INFO -           Worker name:          SLURMCluster-87-1
+2024-01-16 11:49:30,470 - distributed.worker - INFO -           Worker name:          SLURMCluster-87-0
+2024-01-16 11:49:30,470 - distributed.worker - INFO -          dashboard at:          10.3.89.122:42454
+2024-01-16 11:49:30,471 - distributed.worker - INFO -          dashboard at:          10.3.89.122:40318
+2024-01-16 11:49:30,471 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:37277
+2024-01-16 11:49:30,471 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:37277
+2024-01-16 11:49:30,471 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,471 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,471 - distributed.worker - INFO -               Threads:                          2
+2024-01-16 11:49:30,471 - distributed.worker - INFO -               Threads:                          2
+2024-01-16 11:49:30,471 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-16 11:49:30,471 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-16 11:49:30,471 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-0kro7o5x
+2024-01-16 11:49:30,471 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-ahiq0mor
+2024-01-16 11:49:30,471 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,471 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,745 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:37277
+2024-01-16 11:49:30,746 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,746 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:37277
+2024-01-16 11:49:30,786 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:37277
+2024-01-16 11:49:30,786 - distributed.worker - INFO - -------------------------------------------------
+2024-01-16 11:49:30,787 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:37277
+2024-01-16 11:49:42,356 - distributed.core - INFO - Event loop was unresponsive in Worker for 11.57s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-16 11:50:12,409 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:50:42,794 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:51:13,795 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:51:44,796 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:52:15,793 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:52:46,796 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:53:17,795 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:53:48,792 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:54:19,794 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.122:39675
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.122:39675 after 30 s
+2024-01-16 11:54:32,435 - distributed.core - INFO - Event loop was unresponsive in Worker for 290.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59920 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:48986 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59922 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51684 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51686 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46588 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33430 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46590 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47640 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:48988 closed before handshake completed
+2024-01-16 11:54:32,445 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47642 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44277 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44276 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59926 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:48998 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47662 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33448 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59928 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49000 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46594 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46596 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51698 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47664 closed before handshake completed
+2024-01-16 11:54:32,446 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51700 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44304 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44302 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59934 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49006 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47678 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59936 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33462 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49008 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46602 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46604 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51706 closed before handshake completed
+2024-01-16 11:54:32,447 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47680 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51708 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44310 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44312 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59938 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49010 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47682 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33464 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59940 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49012 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46607 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46606 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51710 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51712 closed before handshake completed
+2024-01-16 11:54:32,448 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47684 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44322 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44323 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59942 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49016 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47710 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33486 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59944 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49018 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46618 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46620 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51714 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47712 closed before handshake completed
+2024-01-16 11:54:32,449 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51716 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44326 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44328 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59946 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49020 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47714 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59948 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33494 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49022 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46622 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46624 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51718 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47716 closed before handshake completed
+2024-01-16 11:54:32,450 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51720 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44330 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44332 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59950 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49024 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47718 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33496 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59952 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46626 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49026 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46628 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51722 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47720 closed before handshake completed
+2024-01-16 11:54:32,451 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51724 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44336 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44334 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59954 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49028 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47722 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33498 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59956 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49030 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46630 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46632 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51726 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47724 closed before handshake completed
+2024-01-16 11:54:32,452 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51728 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44341 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44340 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59966 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49032 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47726 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.122:33500 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.81:59968 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.130:49034 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46634 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.89:46636 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51730 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.86:47728 closed before handshake completed
+2024-01-16 11:54:32,453 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.94:51732 closed before handshake completed
+2024-01-16 11:54:32,454 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44344 closed before handshake completed
+2024-01-16 11:54:32,454 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:44345 closed before handshake completed
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+2024-01-16 11:54:40,110 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.66s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+2024-01-16 11:55:33,585 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.94s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+2024-01-16 11:56:37,910 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.40s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-16 11:56:37,915 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.41s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+2024-01-16 11:57:52,820 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-0a266914-0769-4976-99e8-985edb095942
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]C(=C(F)c1c([H])nc([H])c([H])c1[H])C([H])([H])C([H])([H])N1C([H])([H])C([H])([H])C([H])([H])[C@@]1([H])C([H])([H])[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: 'RuntimeError("Can\'t redefine method: forward on class: __torch__.torchani.nn.SpeciesConverter (of Python compilation unit at: 0x2b58d18460a0)")'
+
+2024-01-16 11:57:52,847 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-27a70e17-8fdb-44ce-bb82-71097198b211
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(C2(c3nnc(OC([H])([H])C([H])([H])N4C([H])([H])C([H])([H])C([H])([H])C4([H])[H])s3)C([H])([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: 'RuntimeError("Can\'t redefine method: forward on class: __torch__.torchani.nn.SpeciesConverter (of Python compilation unit at: 0x2ba72fbed190)")'
+
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+using ani2x
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+TIME changed dir: 0.0s
+Optimising conformer:   0%|                               | 0/1 [00:00<?, ?it/s]TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+using ani2x
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+TIME changed dir: 0.0s
+Optimising conformer:   0%|                               | 0/1 [00:00<?, ?it/s][W BinaryOps.cpp:601] Warning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (function operator())
+[W BinaryOps.cpp:601] Warning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (function operator())
+2024-01-16 11:57:56,910 - distributed.utils_perf - INFO - full garbage collection released 17.17 MiB from 251025 reference cycles (threshold: 9.54 MiB)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Optimising conformer: 100%|███████████████████████| 1/1 [00:07<00:00,  7.46s/it]Optimising conformer: 100%|███████████████████████| 1/1 [00:07<00:00,  7.47s/it]
+2024-01-16 11:58:04,818 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-13271853-60bd-464d-beae-eed04811990c
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc(C([H])([H])Oc2nsc(-c3c([H])nc([H])c([H])c3[H])n2)c([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+Optimising conformer: 100%|███████████████████████| 1/1 [00:12<00:00, 12.49s/it]Optimising conformer: 100%|███████████████████████| 1/1 [00:12<00:00, 12.49s/it]
+2024-01-16 11:58:08,523 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-1357ebe5-fe3b-45ca-9501-87a87b627bfe
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]Oc1c([H])c([H])c([H])c(-n2nc([H])c([H])c2-c2c([H])nc([H])c([H])c2[H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+TIME changed dir: 0.0s
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/7 [00:00<?, ?it/s]Optimising conformer:  14%|███▎                   | 1/7 [00:02<00:14,  2.38s/it]failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                              | 0/22 [00:00<?, ?it/s][ATIME changed dir: 0.0s
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/3 [00:00<?, ?it/s]
+Optimising conformer:   5%|█                     | 1/22 [00:03<01:18,  3.74s/it][AOptimising conformer:  29%|██████▌                | 2/7 [00:07<00:19,  3.94s/it]Optimising conformer:  33%|███████▋               | 1/3 [00:04<00:08,  4.36s/it]
+Optimising conformer:   9%|██                    | 2/22 [00:07<01:18,  3.91s/it][AOptimising conformer:  67%|███████████████▎       | 2/3 [00:07<00:03,  3.60s/it]Optimising conformer:  43%|█████████▊             | 3/7 [00:12<00:18,  4.58s/it]Optimising conformer:  57%|█████████████▏         | 4/7 [00:14<00:09,  3.32s/it]Optimising conformer: 100%|███████████████████████| 3/3 [00:10<00:00,  3.14s/it]Optimising conformer: 100%|███████████████████████| 3/3 [00:10<00:00,  3.34s/it]
+Optimising conformer:  71%|████████████████▍      | 5/7 [00:15<00:05,  2.51s/it]
+Optimising conformer:  14%|███                   | 3/22 [00:13<01:28,  4.66s/it][Ausing ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/9 [00:00<?, ?it/s]Optimising conformer:  86%|███████████████████▋   | 6/7 [00:20<00:03,  3.32s/it]
+Optimising conformer:  18%|████                  | 4/22 [00:18<01:26,  4.80s/it][AOptimising conformer: 100%|███████████████████████| 7/7 [00:21<00:00,  2.72s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:21<00:00,  3.09s/it]
+Optimising conformer:  11%|██▌                    | 1/9 [00:03<00:26,  3.31s/it]Optimising conformer:  22%|█████                  | 2/9 [00:05<00:16,  2.38s/it]
+Optimising conformer:  23%|█████                 | 5/22 [00:22<01:15,  4.44s/it][A
+Optimising conformer:  27%|██████                | 6/22 [00:24<00:59,  3.72s/it][A
+Optimising conformer:  32%|███████               | 7/22 [00:26<00:47,  3.18s/it][AOptimising conformer:  33%|███████▋               | 3/9 [00:10<00:22,  3.83s/it]
+Optimising conformer:  36%|████████              | 8/22 [00:30<00:46,  3.32s/it][A
+Optimising conformer:  41%|█████████             | 9/22 [00:32<00:39,  3.02s/it][A/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Optimising conformer:  44%|██████████▏            | 4/9 [00:16<00:23,  4.79s/it]/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+
+Optimising conformer:  45%|█████████▌           | 10/22 [00:34<00:33,  2.77s/it][AOptimising conformer:  56%|████████████▊          | 5/9 [00:18<00:15,  3.78s/it]
+Optimising conformer:  50%|██████████▌          | 11/22 [00:37<00:29,  2.65s/it][A
+Optimising conformer:  55%|███████████▍         | 12/22 [00:39<00:25,  2.53s/it][AOptimising conformer:  67%|███████████████▎       | 6/9 [00:24<00:13,  4.34s/it]Optimising conformer:  78%|█████████████████▉     | 7/9 [00:26<00:07,  3.57s/it]
+Optimising conformer:  59%|████████████▍        | 13/22 [00:44<00:30,  3.37s/it][AOptimising conformer:  89%|████████████████████▍  | 8/9 [00:29<00:03,  3.48s/it]
+Optimising conformer:  64%|█████████████▎       | 14/22 [00:48<00:29,  3.66s/it][AOptimising conformer: 100%|███████████████████████| 9/9 [00:36<00:00,  4.43s/it]Optimising conformer: 100%|███████████████████████| 9/9 [00:36<00:00,  4.01s/it]
+
+Optimising conformer:  68%|██████████████▎      | 15/22 [00:53<00:27,  3.86s/it][A
+Optimising conformer:  73%|███████████████▎     | 16/22 [00:55<00:20,  3.38s/it][A
+Optimising conformer:  77%|████████████████▏    | 17/22 [00:57<00:15,  3.04s/it][A
+Optimising conformer:  82%|█████████████████▏   | 18/22 [01:03<00:14,  3.60s/it][A
+Optimising conformer:  86%|██████████████████▏  | 19/22 [01:06<00:10,  3.53s/it][ATIME Completed the molecule generation in 98.9s.
+TIME changed dir: 0.0s
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/15 [00:00<?, ?it/s]/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 8 (atoms 8-9 of element (C-N)
+
+
+Optimising conformer:  91%|███████████████████  | 20/22 [01:09<00:06,  3.39s/it][AOptimising conformer:   7%|█▍                    | 1/15 [00:04<01:07,  4.82s/it]
+Optimising conformer:  95%|████████████████████ | 21/22 [01:12<00:03,  3.43s/it][AOptimising conformer:  13%|██▉                   | 2/15 [00:07<00:43,  3.36s/it]
+Optimising conformer: 100%|█████████████████████| 22/22 [01:15<00:00,  3.22s/it][AOptimising conformer: 100%|█████████████████████| 22/22 [01:15<00:00,  3.43s/it]
+Optimising conformer:  20%|████▍                 | 3/15 [00:11<00:47,  3.92s/it]Optimising conformer:  27%|█████▊                | 4/15 [00:13<00:34,  3.17s/it]Optimising conformer:  33%|███████▎              | 5/15 [00:16<00:29,  2.94s/it]Optimising conformer:  40%|████████▊             | 6/15 [00:18<00:23,  2.66s/it]Optimising conformer:  47%|██████████▎           | 7/15 [00:20<00:20,  2.58s/it]Optimising conformer:  53%|███████████▋          | 8/15 [00:23<00:17,  2.48s/it]/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Optimising conformer:  60%|█████████████▏        | 9/15 [00:24<00:13,  2.25s/it]2024-01-16 12:00:36,154 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-442e0336-d876-48a4-8328-e263abf6a2a7
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c([C@]2([H])N(C(=O)N([H])c3c([H])c([H])nc([H])c3[H])C(=O)C([H])([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Optimising conformer:  67%|██████████████       | 10/15 [00:29<00:14,  2.94s/it]2024-01-16 12:00:42,061 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-455f93c9-476e-4d5f-8ae4-4ab612ca98c1
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(-c2nnnn2C([H])([H])c2c([H])c([H])c3c(c2[H])OC([H])([H])O3)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:00:43,793 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-42599309-ef65-441d-b8b9-8c5bb20c9f2f
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(N2C(C([H])([H])N3C([H])([H])C([H])([H])C([H])([H])C([H])([H])C3([H])[H])=NC([H])([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Optimising conformer:  73%|███████████████▍     | 11/15 [00:36<00:16,  4.24s/it]2024-01-16 12:00:47,920 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-4524134d-7664-4e87-9648-5e895ffe54ee
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c([C@]2([H])[C@]3([H])C([H])([H])N(c4nnnn4[H])C([H])([H])[C@]23[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+2024-01-16 12:00:49,283 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-48369fa0-089e-4865-8353-d2103419ef92
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(Oc2c([H])nn([H])c2C([H])([H])N2C(=O)c3c([H])c([H])c([H])c([H])c3C2=O)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Optimising conformer:  80%|████████████████▊    | 12/15 [00:39<00:11,  3.98s/it]/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-16 12:00:52,700 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-4c2d8d27-6240-4fb8-bcba-f4f0861c9bd7
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]C(=C(c1c([H])nc([H])c([H])c1[H])C([H])([H])[H])c1c([H])c([H])c([H])c(C(F)(F)F)c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:00:54,138 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-4b9f1a30-8df4-443f-8a32-c44e1f57fc25
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(-n2nc(C([H])([H])c3c([H])c([H])c(Cl)c(Cl)c3[H])c([H])c([H])c2=O)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Optimising conformer:  87%|██████████████████▏  | 13/15 [00:43<00:07,  3.77s/it]Optimising conformer:  93%|███████████████████▌ | 14/15 [00:45<00:03,  3.45s/it]2024-01-16 12:00:57,830 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-3ec8c743-cb2d-4e56-94d9-928e6a7ed2e3
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc(-c2c([H])nc([H])c([H])c2[H])nc(N2C([H])([H])C([H])([H])N(C([H])([H])C([H])([H])[H])C([H])([H])C2([H])[H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Optimising conformer: 100%|█████████████████████| 15/15 [00:47<00:00,  2.90s/it]Optimising conformer: 100%|█████████████████████| 15/15 [00:47<00:00,  3.17s/it]
+2024-01-16 12:01:00,010 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-4d71cfe2-ee8a-4c7d-b78f-cc93dc3d63bb
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(-n2c([H])c([H])n3nc(-c4c([H])c([H])c([H])c5c4c([H])c([H])n5[H])c([H])c23)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-01-16 12:01:02,381 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-4d1abc46-0514-48c0-8816-1ee7d321e191
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]ON(C(=O)N([H])N([H])C(=O)N([H])C1([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C1([H])[H])c1c([H])nc([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:04,060 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-51273c11-48f7-4c21-be09-e10fc3124032
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]C#CC([H])([H])OC([H])([H])C(=C([H])[H])c1c([H])nc([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:07,026 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-4e9dfeac-7caf-4f0e-abff-0673393e6469
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(N([H])S(=O)(=O)C#Cc2c([H])c([H])c([H])c([H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:11,057 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-52e0d951-c365-4dd2-b359-2a2e637053c9
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]O[C@@]([H])(c1c([H])c([H])c([H])c([H])c1[H])c1c([H])c([H])n(-c2c([H])nc([H])c([H])c2[H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:11,453 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-524803d6-0c43-4ae6-8bc6-583b3740f3e3
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]C1=C(c2nc(C(F)(F)F)c([H])c([H])c2[H])C([H])([H])C([H])([H])N(c2c([H])nc([H])c([H])c2[H])C1=O', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:14,602 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-5a3c158c-7caa-4cf1-9e63-61606260d70d
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(-c2nc3sc([H])c([C@]4([H])C([H])([H])OC([H])([H])C4([H])[H])n3n2)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:20,230 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-5b1b03c2-3ea3-4f66-a15f-fc1ca09b5ded
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(N(C([H])([H])[H])[C@]([H])(C([H])([H])[H])C([H])([H])c2c([H])c([H])c(F)c([H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:20,546 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-56cf784c-f772-4700-b040-b70c28b36ba6
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(C(C(=O)N([H])C(=O)N([H])C([H])([H])C([H])([H])c2c([H])c([H])c([H])c([H])c2[H])(C([H])([H])[H])C([H])([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:24,707 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-5fde139f-8285-4092-9df6-6c3938ffff4c
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]O[C@@]([H])(c1c([H])c2c([H])c([H])c([H])c([H])c2n1[H])C1(c2c([H])nc([H])c([H])c2[H])C([H])([H])C([H])([H])C1([H])[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:27,075 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-5b7dbfda-422f-4ea1-bd60-cfeb5ac3ac92
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c([C@]2([H])C([H])([H])[C@@]3([H])N(N([H])C([H])([H])C([H])([H])N(C([H])([H])[H])C([H])([H])[H])[C@]([H])(C([H])([H])C3([H])[H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (N-C)
+
+2024-01-16 12:01:29,780 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-679543da-1a34-41cd-a9bf-aff64494116b
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]N=C(SC([H])([H])N(C([H])([H])[H])C([H])([H])c1c([H])c([H])c([H])c([H])c1[H])c1c([H])nc([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:29,781 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-624a8616-991e-4a21-a76b-a1d57b428085
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nnc(C([H])([H])c2c([H])c([H])c(C(F)(F)F)c([H])c2[H])nc1-c1c([H])nc([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 7 (atoms 6-8 of element (C-C)
+
+2024-01-16 12:01:33,093 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-6c6d931d-84e7-420f-8cc0-0f6c862d4c2c
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(-n2c([H])nnc2C([H])([H])N([H])C(=O)c2sc([H])c([H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:34,109 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-743e2e69-5039-440f-9f2a-23fc40004b26
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]OC(=O)C(=O)C([H])=C(O[H])c1c([H])c([H])nc([H])c1-c1c([H])nc([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:37,150 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-7d3327b1-8de6-45b6-a437-ab0a167fa081
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(SC(=S)c2sc3c([H])c([H])c([H])c([H])c3c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:39,907 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-77f3edaa-aac5-4c2e-86c5-29a5cb31e24e
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(C([H])([H])n2c([H])nnc2-c2c([H])nc3c([H])c([H])c([H])c([H])c3c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:43,469 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-7fe7fa65-609c-48a1-80b0-cf403a76a6dc
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(N([H])N([H])C(=O)c2c([H])c([H])c(OC([H])([H])C([H])([H])[H])c([H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:47,259 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-8374023e-d4df-46ad-bdf4-6d8700708084
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c([C@@]2([H])C(=O)N([H])C(=O)N2Oc2c([H])c([H])c(F)c([H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:48,114 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-841a3ee9-14aa-4495-8bef-b6801b59f4ab
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(-c2c([H])nc([H])c(C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])C([H])([H])[H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:51,367 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-7ec3a9a3-fa1f-48cc-bc5f-388bdbcf0a27
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc(N2C([H])([H])C([H])([H])N([C@@]3(c4c([H])nc([H])c([H])c4[H])C([H])([H])[C@]4([H])C([H])([H])C([H])([H])[C@@]3([H])C4([H])[H])C([H])([H])C2([H])[H])c([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:52,713 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:01:53,670 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:01:53,720 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-8964f0b7-43b3-4aca-876d-ceb779f427aa
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]OC([H])([H])c1c([H])c([H])c([H])c(N2C(=O)[C@]([H])(c3c([H])nc([H])c([H])c3[H])C([H])([H])C2([H])[H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:55,116 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-8b859aee-6850-4225-9f56-37f96c238693
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(-c2nnn(-c3c([H])c([H])c([H])c(-c4c([H])c([H])c([H])c([H])c4[H])c3[H])c2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:01:55,613 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:01:56,173 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-8ce63312-7356-4bce-94a0-704249f07a65
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(N([H])[S@@](=O)c2c([H])c([H])c3c(c2[H])OC([H])([H])C([H])([H])O3)c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-N)
+
+2024-01-16 12:01:59,364 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-97ea3744-6c06-48a1-b6e8-dd52d2aa896f
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]C(=Nc1c([H])nc([H])c([H])c1[H])C([H])([H])c1c([H])c([H])c2c([H])c([H])c([H])c([H])c2c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:01,624 - distributed.utils_perf - WARNING - full garbage collections took 15% CPU time recently (threshold: 10%)
+2024-01-16 12:02:02,102 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:02,411 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-9cfe03ad-7fe0-42a2-8324-264a93d5755b
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(N(N([H])c2c([H])c([H])c3c(c([H])nn3[H])c2[H])C([H])([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:03,210 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:03,597 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-992139a0-ed0f-4015-901e-9a7d8e82be1b
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]O[C@@]([H])(c1c([H])nc([H])c([H])c1[H])C1(C([H])([H])c2c([H])c([H])c(C([H])([H])[H])c([H])c2[H])C([H])([H])C([H])([H])C1([H])[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:04,602 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:06,101 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:06,781 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-a6e2acf5-c35c-4e85-bc25-c8a11ac03d80
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(N2C([H])([H])C([H])([H])N(c3c([H])c([H])c(F)c([H])c3F)C([H])([H])C([H])([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:07,600 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:08,365 - distributed.utils_perf - WARNING - full garbage collections took 15% CPU time recently (threshold: 10%)
+2024-01-16 12:02:09,961 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:10,219 - distributed.utils_perf - WARNING - full garbage collections took 15% CPU time recently (threshold: 10%)
+2024-01-16 12:02:11,621 - distributed.utils_perf - WARNING - full garbage collections took 13% CPU time recently (threshold: 10%)
+2024-01-16 12:02:11,787 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:12,172 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-a99cf340-05a3-47f1-a961-ce58ad6bdb7b
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(N2N=C(Oc3c([H])c([H])c(Cl)c([H])c3[H])C([H])([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:12,394 - distributed.utils_perf - WARNING - full garbage collections took 14% CPU time recently (threshold: 10%)
+2024-01-16 12:02:12,897 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-b471bd76-5551-44e1-a688-119d87e701c2
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(SN([H])N2C([H])([H])C([H])([H])C([H])(N3C([H])([H])C([H])([H])C([H])([H])C3([H])[H])C([H])([H])C2([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:13,398 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:13,657 - distributed.utils_perf - WARNING - full garbage collections took 14% CPU time recently (threshold: 10%)
+2024-01-16 12:02:14,234 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-a73dbdf3-4c67-499d-9e40-7f59bb179bfe
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(N2C([H])([H])[C@]3([H])N(c4nc([H])c(C(F)(F)F)c([H])c4[H])C([H])([H])[C@@]2([H])C3([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:14,704 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:16,162 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-ca8706e9-e50f-4dd6-bb1c-086a0b33876f
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])n(OC(=O)N(c2c([H])nc([H])c([H])c2[H])C([H])([H])[H])n1', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:17,202 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:17,916 - distributed.utils_perf - WARNING - full garbage collections took 14% CPU time recently (threshold: 10%)
+2024-01-16 12:02:18,008 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-c30923b2-8f28-4a0a-8502-6fda063eb926
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(-c2nn3c(c2C([H])([H])c2c([H])c([H])c([H])c([H])c2Cl)C([H])([H])C([H])([H])C3([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:19,196 - distributed.utils_perf - WARNING - full garbage collections took 14% CPU time recently (threshold: 10%)
+2024-01-16 12:02:20,258 - distributed.utils_perf - WARNING - full garbage collections took 14% CPU time recently (threshold: 10%)
+2024-01-16 12:02:21,064 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:22,147 - distributed.utils_perf - WARNING - full garbage collections took 14% CPU time recently (threshold: 10%)
+2024-01-16 12:02:22,362 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:22,574 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-e7c77743-106e-4a13-9ad1-f470f5422687
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(C2=C(N([H])C(=O)c3c([H])c([H])nc([H])c3[H])C([H])([H])C3(C2([H])[H])C([H])([H])C3([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:22,586 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-b8fba06f-4cbf-4075-b870-244cbf90e68a
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2ba65c18d400>, 6, '[H]c1nc([H])c(-c2c([H])n(-c3c([H])c([H])c(C(=O)OC([H])([H])[H])c([H])c3[H])c(=S)n2[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:22,791 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-ff64d0d0-9511-47b1-afc1-817d33337901
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]Oc1c([H])c([H])c(-c2nc(-c3c([H])nc([H])c([H])c3[H])oc2[H])c([H])c1O[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+2024-01-16 12:02:23,510 - distributed.utils_perf - WARNING - full garbage collections took 10% CPU time recently (threshold: 10%)
+2024-01-16 12:02:24,550 - distributed.utils_perf - WARNING - full garbage collections took 11% CPU time recently (threshold: 10%)
+2024-01-16 12:02:24,996 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-e5a53a50-45aa-48d5-8477-28ad8675a0bf
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b58cd9dc040>, 6, '[H]c1nc([H])c(C(=O)N([H])C(c2c([H])c([H])nc(OC([H])([H])[H])c2[H])(C([H])([H])[H])C([H])([H])[H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "JSONDecodeError('Invalid control character at: line 96 column 141406 (char 3619649)')"
+
+slurmstepd: error: *** JOB 19761818 ON sb042 CANCELLED AT 2024-01-16T12:18:11 ***

@@ -1,0 +1,888 @@
+hostname sb094.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:61:07:7e brd ff:ff:ff:ff:ff:ff inet 10.3.81.174/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe61:77e/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:61:07:7f brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:61:07:80 brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:61:07:81 brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:88:66:39:03:00:23:be:61 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.174/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.97.174/22 brd 10.3.99.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::8a66:3903:23:be61/64 scope link valid_lft forever preferred_lft forever 7: ib1: <BROADCAST,MULTICAST> mtu 4092 qdisc noop state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:88:66:39:03:00:23:be:62 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-02-01 06:02:32,449 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.174:33592'
+2024-02-01 06:02:34,841 - distributed.diskutils - INFO - Found stale lock file and directory '/scratch/dask-worker-space/worker-p_92oaby', purging
+2024-02-01 06:02:34,842 - distributed.diskutils - INFO - Found stale lock file and directory '/scratch/dask-worker-space/worker-gnkzzbh7', purging
+2024-02-01 06:02:50,681 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.174:37171
+2024-02-01 06:02:50,682 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.174:37171
+2024-02-01 06:02:50,682 - distributed.worker - INFO -           Worker name:           SLURMCluster-378
+2024-02-01 06:02:50,683 - distributed.worker - INFO -          dashboard at:          10.3.89.174:33446
+2024-02-01 06:02:50,683 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.11:37020
+2024-02-01 06:02:50,683 - distributed.worker - INFO - -------------------------------------------------
+2024-02-01 06:02:50,683 - distributed.worker - INFO -               Threads:                          2
+2024-02-01 06:02:50,683 - distributed.worker - INFO -                Memory:                  20.49 GiB
+2024-02-01 06:02:50,683 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-uqon_b1l
+2024-02-01 06:02:50,683 - distributed.worker - INFO - -------------------------------------------------
+2024-02-01 06:02:50,777 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.11:37020
+2024-02-01 06:02:50,777 - distributed.worker - INFO - -------------------------------------------------
+2024-02-01 06:02:50,777 - distributed.core - INFO - Starting established connection to tcp://10.3.88.11:37020
+2024-02-01 06:03:34,343 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 06:09:44,542 - distributed.core - INFO - Event loop was unresponsive in Worker for 98.95s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 06:09:44,542 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 98.95s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 06:10:01,984 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 4)
+ - Atom C (index 20)
+
+2024-02-01 06:10:02,363 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 3)
+ - Atom C (index 27)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-02-01 06:10:06,747 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 4)
+ - Atom C (index 20)
+
+2024-02-01 06:10:06,820 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 3)
+ - Atom C (index 27)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+2024-02-01 06:11:15,790 [WARNING] [__init__.py:5] root: Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 49 conformers. 
+Generated 47 conformers. 
+Removed 34 conformers. 
+Removed 42 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/7 [00:00<?, ?it/s][W BinaryOps.cpp:601] Warning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (function operator())
+Optimising conformer:  14%|███▎                   | 1/7 [00:05<00:33,  5.56s/it]Optimising conformer:  29%|██████▌                | 2/7 [00:08<00:20,  4.06s/it]Optimising conformer:  43%|█████████▊             | 3/7 [00:12<00:15,  3.86s/it]Optimising conformer:  57%|█████████████▏         | 4/7 [00:16<00:11,  3.91s/it]Optimising conformer:  71%|████████████████▍      | 5/7 [00:23<00:09,  4.99s/it]Optimising conformer:  86%|███████████████████▋   | 6/7 [00:26<00:04,  4.46s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:29<00:00,  3.93s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:29<00:00,  4.20s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 138.6s.
+TIME changed dir: 0.0s
+Generated 8 conformers. 
+Removed 0 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/13 [00:00<?, ?it/s]
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s][A
+Optimising conformer:  12%|██▉                    | 1/8 [00:02<00:17,  2.52s/it][AOptimising conformer:   8%|█▋                    | 1/13 [00:03<00:43,  3.60s/it]
+Optimising conformer:  25%|█████▊                 | 2/8 [00:03<00:11,  1.89s/it][A
+Optimising conformer:  38%|████████▋              | 3/8 [00:05<00:08,  1.69s/it][AOptimising conformer:  15%|███▍                  | 2/13 [00:08<00:46,  4.20s/it]
+Optimising conformer:  50%|███████████▌           | 4/8 [00:08<00:09,  2.31s/it][A
+Optimising conformer:  62%|██████████████▍        | 5/8 [00:10<00:05,  1.96s/it][AOptimising conformer:  23%|█████                 | 3/13 [00:12<00:41,  4.13s/it]
+Optimising conformer:  75%|█████████████████▎     | 6/8 [00:13<00:04,  2.37s/it][AOptimising conformer:  31%|██████▊               | 4/13 [00:15<00:35,  3.95s/it]
+Optimising conformer:  88%|████████████████████▏  | 7/8 [00:15<00:02,  2.42s/it][A
+Optimising conformer: 100%|███████████████████████| 8/8 [00:19<00:00,  2.79s/it][AOptimising conformer: 100%|███████████████████████| 8/8 [00:19<00:00,  2.41s/it]
+Optimising conformer:  38%|████████▍             | 5/13 [00:21<00:34,  4.36s/it]Optimising conformer:  46%|██████████▏           | 6/13 [00:24<00:29,  4.16s/it]/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Optimising conformer:  54%|███████████▊          | 7/13 [00:34<00:35,  5.93s/it]Optimising conformer:  62%|█████████████▌        | 8/13 [00:38<00:26,  5.24s/it]Optimising conformer:  69%|███████████████▏      | 9/13 [00:41<00:18,  4.70s/it]Optimising conformer:  77%|████████████████▏    | 10/13 [00:44<00:12,  4.20s/it]Optimising conformer:  85%|█████████████████▊   | 11/13 [00:47<00:07,  3.65s/it]Optimising conformer:  92%|███████████████████▍ | 12/13 [00:50<00:03,  3.61s/it]Optimising conformer: 100%|█████████████████████| 13/13 [00:53<00:00,  3.24s/it]Optimising conformer: 100%|█████████████████████| 13/13 [00:53<00:00,  4.08s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 55.8s.
+TIME changed dir: 0.0s
+Generated 8 conformers. 
+Removed 2 conformers. 
+TIME Completed the molecule generation in 226.8s.
+TIME changed dir: 0.0s
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+Generated 27 conformers. 
+Removed 20 conformers. 
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/6 [00:00<?, ?it/s]Optimising conformer:  17%|███▊                   | 1/6 [00:02<00:14,  2.88s/it]Optimising conformer:  33%|███████▋               | 2/6 [00:04<00:08,  2.17s/it]Optimising conformer:  50%|███████████▌           | 3/6 [00:06<00:06,  2.05s/it]Optimising conformer:  67%|███████████████▎       | 4/6 [00:09<00:04,  2.32s/it]Optimising conformer:  83%|███████████████████▏   | 5/6 [00:10<00:02,  2.09s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:13<00:00,  2.21s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:13<00:00,  2.22s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 75.4s.
+TIME changed dir: 0.0s
+Generated 35 conformers. 
+Removed 27 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/7 [00:00<?, ?it/s]Optimising conformer:  14%|███▎                   | 1/7 [00:07<00:46,  7.82s/it]Optimising conformer:  29%|██████▌                | 2/7 [00:10<00:25,  5.05s/it]Optimising conformer:  43%|█████████▊             | 3/7 [00:14<00:17,  4.31s/it]Optimising conformer:  57%|█████████████▏         | 4/7 [00:16<00:09,  3.31s/it]Optimising conformer:  71%|████████████████▍      | 5/7 [00:18<00:05,  2.80s/it]Optimising conformer:  86%|███████████████████▋   | 6/7 [00:19<00:02,  2.48s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:25<00:00,  3.60s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:25<00:00,  3.68s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+TIME Completed the molecule generation in 111.3s.
+TIME changed dir: 0.0s
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Generated 49 conformers. 
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]2024-02-01 06:15:37,510 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 27)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-02-01 06:15:39,564 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 27)
+
+Optimising conformer:  12%|██▉                    | 1/8 [00:05<00:41,  5.90s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:10<00:30,  5.09s/it]Optimising conformer:  38%|████████▋              | 3/8 [00:14<00:23,  4.62s/it]Optimising conformer:  50%|███████████▌           | 4/8 [00:20<00:20,  5.19s/it]Optimising conformer:  62%|██████████████▍        | 5/8 [00:23<00:13,  4.36s/it]Optimising conformer:  75%|█████████████████▎     | 6/8 [00:30<00:10,  5.25s/it]Optimising conformer:  88%|████████████████████▏  | 7/8 [00:36<00:05,  5.38s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:42<00:00,  5.63s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:42<00:00,  5.28s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+Removed 39 conformers. 
+TIME Completed the molecule generation in 139.6s.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/10 [00:00<?, ?it/s]Optimising conformer:  10%|██▏                   | 1/10 [00:04<00:42,  4.68s/it]Optimising conformer:  20%|████▍                 | 2/10 [00:11<00:46,  5.86s/it]Optimising conformer:  30%|██████▌               | 3/10 [00:15<00:34,  4.93s/it]Optimising conformer:  40%|████████▊             | 4/10 [00:40<01:17, 12.97s/it]Optimising conformer:  50%|███████████           | 5/10 [00:43<00:47,  9.41s/it]Optimising conformer:  60%|█████████████▏        | 6/10 [00:46<00:28,  7.17s/it]Optimising conformer:  70%|███████████████▍      | 7/10 [00:55<00:23,  7.70s/it]Optimising conformer:  80%|█████████████████▌    | 8/10 [00:59<00:13,  6.61s/it]Optimising conformer:  90%|███████████████████▊  | 9/10 [01:03<00:05,  5.83s/it]Optimising conformer: 100%|█████████████████████| 10/10 [01:08<00:00,  5.40s/it]Optimising conformer: 100%|█████████████████████| 10/10 [01:08<00:00,  6.80s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+2024-02-01 06:29:38,916 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.00s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 06:29:38,916 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.00s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+[06:45:09] Explicit valence for atom # 4 N, 4, is greater than permitted
+2024-02-01 06:45:52,918 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.14s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 06:45:52,918 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.14s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 06:52:09,724 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.94s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 06:52:09,724 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 3.94s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 183.6s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 25 conformers. 
+Generated 21 conformers. 
+Removed 21 conformers. 
+Removed 17 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/4 [00:00<?, ?it/s]
+Optimising conformer:   0%|                               | 0/4 [00:00<?, ?it/s][AOptimising conformer:  25%|█████▊                 | 1/4 [00:03<00:10,  3.60s/it]Optimising conformer:  50%|███████████▌           | 2/4 [00:05<00:05,  2.73s/it]
+Optimising conformer:  25%|█████▊                 | 1/4 [00:06<00:19,  6.42s/it][AOptimising conformer:  75%|█████████████████▎     | 3/4 [00:08<00:02,  2.79s/it]
+Optimising conformer:  50%|███████████▌           | 2/4 [00:09<00:08,  4.42s/it][AOptimising conformer: 100%|███████████████████████| 4/4 [00:12<00:00,  3.31s/it]Optimising conformer: 100%|███████████████████████| 4/4 [00:12<00:00,  3.17s/it]
+
+Optimising conformer:  75%|█████████████████▎     | 3/4 [00:13<00:04,  4.23s/it][A
+Optimising conformer: 100%|███████████████████████| 4/4 [00:16<00:00,  3.58s/it][AOptimising conformer: 100%|███████████████████████| 4/4 [00:16<00:00,  4.01s/it]
+2024-02-01 07:14:48,520 - distributed.worker - WARNING - Compute Failed
+Key:       evaluate-7d59be58-f1cd-4850-9464-d0677720020c
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b058e6c91d0>, 6, '[H]O[C@]([H])(N([H])c1c([H])nc([H])c([H])c1[H])[C@@]1([H])C([H])([H])[C@]1([H])c1c([H])c([H])c([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+2024-02-01 07:14:48,520 [WARNING] [worker.py:2352] distributed.worker: Compute Failed
+Key:       evaluate-7d59be58-f1cd-4850-9464-d0677720020c
+Function:  evaluate
+args:      (<rdkit.Chem.rdchem.Mol object at 0x2b058e6c91d0>, 6, '[H]O[C@]([H])(N([H])c1c([H])nc([H])c([H])c1[H])[C@@]1([H])C([H])([H])[C@]1([H])c1c([H])c([H])c([H])c([H])c1[H]', '/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rec_final.pdb', '/nobackup/nmb1063/sars-fegrow/gnina')
+kwargs:    {}
+Exception: "Exception('No Conformers')"
+
+2024-02-01 07:14:55,988 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.57s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 07:14:55,988 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.57s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 07:15:05,209 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 07:15:05,209 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-02-01 07:15:24,263 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 14)
+ - Atom C (index 17)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-02-01 07:15:26,175 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 14)
+ - Atom C (index 17)
+
+2024-02-01 07:16:15,965 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.12s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 07:16:16,315 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 07:16:16,315 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+TIME changed dir: 0.0s
+TIME Completed the molecule generation in 104.6s.
+TIME changed dir: 0.0s
+Generated 50 conformers. 
+Generated 12 conformers. 
+Removed 7 conformers. 
+Removed 43 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:02<00:11,  2.88s/it]Optimising conformer:  40%|█████████▏             | 2/5 [00:04<00:07,  2.42s/it]Optimising conformer:  60%|█████████████▊         | 3/5 [00:08<00:05,  2.93s/it]Optimising conformer:  80%|██████████████████▍    | 4/5 [00:10<00:02,  2.40s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:12<00:00,  2.55s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:12<00:00,  2.59s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 103.9s.
+TIME changed dir: 0.0s
+Generated 41 conformers. 
+Removed 30 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/11 [00:00<?, ?it/s]Optimising conformer:   9%|██                    | 1/11 [00:07<01:19,  7.99s/it]Optimising conformer:  18%|████                  | 2/11 [00:11<00:49,  5.44s/it]Optimising conformer:  27%|██████                | 3/11 [00:16<00:42,  5.36s/it]Optimising conformer:  36%|████████              | 4/11 [00:21<00:34,  4.92s/it]Optimising conformer:  45%|██████████            | 5/11 [00:25<00:27,  4.65s/it]Optimising conformer:  55%|████████████          | 6/11 [00:29<00:22,  4.56s/it]Optimising conformer:  64%|██████████████        | 7/11 [00:33<00:17,  4.46s/it]Optimising conformer:  73%|████████████████      | 8/11 [00:37<00:12,  4.25s/it]Optimising conformer:  82%|██████████████████    | 9/11 [00:41<00:08,  4.00s/it]Optimising conformer:  91%|███████████████████  | 10/11 [00:48<00:04,  4.90s/it]Optimising conformer: 100%|█████████████████████| 11/11 [00:52<00:00,  4.83s/it]Optimising conformer: 100%|█████████████████████| 11/11 [00:52<00:00,  4.80s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+TIME Completed the molecule generation in 153.5s.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/7 [00:00<?, ?it/s]Optimising conformer:  14%|███▎                   | 1/7 [00:07<00:45,  7.60s/it]Optimising conformer:  29%|██████▌                | 2/7 [00:16<00:42,  8.45s/it]Optimising conformer:  43%|█████████▊             | 3/7 [00:19<00:24,  6.10s/it]Optimising conformer:  57%|█████████████▏         | 4/7 [00:23<00:15,  5.20s/it]Optimising conformer:  71%|████████████████▍      | 5/7 [00:26<00:08,  4.42s/it]Optimising conformer:  86%|███████████████████▋   | 6/7 [00:30<00:04,  4.01s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:33<00:00,  4.00s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:33<00:00,  4.86s/it]
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+2024-02-01 08:01:23,720 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:01:23,720 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:03:12,502 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.22s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:03:12,502 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.22s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:19:55,218 - distributed.core - INFO - Event loop was unresponsive in Nanny for 14.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:19:55,265 - distributed.core - INFO - Event loop was unresponsive in Worker for 13.11s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:19:55,265 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 13.11s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:30:56,923 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.43s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:30:57,001 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:30:57,001 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 3.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:03,932 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.96s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:03,989 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:03,989 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:13,723 - distributed.core - INFO - Event loop was unresponsive in Nanny for 8.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:21,974 - distributed.core - INFO - Event loop was unresponsive in Worker for 17.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:21,974 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 17.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:21,980 - distributed.core - INFO - Event loop was unresponsive in Nanny for 8.38s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:35,604 - distributed.core - INFO - Event loop was unresponsive in Nanny for 12.96s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:39,047 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.58s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:39,957 - distributed.core - INFO - Event loop was unresponsive in Worker for 17.98s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:39,957 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 17.98s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:44,956 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:45,063 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.11s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:45,063 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 5.11s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:52,013 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:52,013 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:59,039 - distributed.core - INFO - Event loop was unresponsive in Nanny for 12.88s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:59,053 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:31:59,053 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 7.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:35:38,019 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.93:44896
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.93:44896 after 30 s
+2024-02-01 08:35:38,019 [ERROR] [worker.py:2115] distributed.worker: Worker stream died during communication: tcp://10.3.89.93:44896
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.93:44896 after 30 s
+2024-02-01 08:36:08,060 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.95:36040
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.95:36040 after 30 s
+2024-02-01 08:36:08,060 [ERROR] [worker.py:2115] distributed.worker: Worker stream died during communication: tcp://10.3.89.95:36040
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.95:36040 after 30 s
+2024-02-01 08:36:38,782 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.93:44896
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.93:44896 after 30 s
+2024-02-01 08:36:38,782 [ERROR] [worker.py:2115] distributed.worker: Worker stream died during communication: tcp://10.3.89.93:44896
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.93:44896 after 30 s
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-02-01 08:36:57,217 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 2)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-02-01 08:36:58,918 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 2)
+
+TIME Completed the molecule generation in 689.6s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 45 conformers. 
+Removed 31 conformers. 
+Generated 44 conformers. 
+Removed 38 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/6 [00:00<?, ?it/s]failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                              | 0/14 [00:00<?, ?it/s][AOptimising conformer:  17%|███▊                   | 1/6 [00:04<00:23,  4.74s/it]Optimising conformer:  33%|███████▋               | 2/6 [00:06<00:12,  3.16s/it]Optimising conformer:  50%|███████████▌           | 3/6 [00:10<00:10,  3.42s/it]
+Optimising conformer:   7%|█▌                    | 1/14 [00:06<01:27,  6.72s/it][AOptimising conformer:  67%|███████████████▎       | 4/6 [00:14<00:07,  3.55s/it]
+Optimising conformer:  14%|███▏                  | 2/14 [00:12<01:14,  6.25s/it][AOptimising conformer:  83%|███████████████████▏   | 5/6 [00:18<00:03,  3.78s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:20<00:00,  3.21s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:20<00:00,  3.43s/it]
+
+Optimising conformer:  21%|████▋                 | 3/14 [00:16<00:57,  5.20s/it][A2024-02-01 08:38:34,014 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.49s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:38:34,064 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:38:34,064 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:39:12,176 - distributed.core - INFO - Event loop was unresponsive in Nanny for 38.12s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:39:12,306 - distributed.core - INFO - Event loop was unresponsive in Worker for 38.24s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:39:12,306 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 38.24s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+
+Optimising conformer:  29%|██████▎               | 4/14 [01:06<03:49, 22.97s/it][A/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+
+Optimising conformer:  36%|███████▊              | 5/14 [01:12<02:32, 16.90s/it][A
+Optimising conformer:  43%|█████████▍            | 6/14 [01:14<01:34, 11.85s/it][A
+Optimising conformer:  50%|███████████           | 7/14 [01:20<01:08,  9.73s/it][A
+Optimising conformer:  57%|████████████▌         | 8/14 [01:23<00:46,  7.76s/it][A
+Optimising conformer:  64%|██████████████▏       | 9/14 [01:26<00:30,  6.13s/it][A2024-02-01 08:39:51,016 - distributed.core - INFO - Event loop was unresponsive in Nanny for 9.93s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:40:10,975 - distributed.core - INFO - Event loop was unresponsive in Nanny for 19.66s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:40:33,064 - distributed.core - INFO - Event loop was unresponsive in Nanny for 22.75s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:40:39,799 - distributed.core - INFO - Event loop was unresponsive in Worker for 56.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:40:39,799 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 56.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:40:54,946 - distributed.core - INFO - Event loop was unresponsive in Nanny for 21.77s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:40:56,182 - distributed.core - INFO - Event loop was unresponsive in Worker for 16.81s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:40:56,182 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 16.81s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:41:06,073 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:41:06,290 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.28s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:41:06,290 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.28s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:41:13,791 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.36s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:41:19,031 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:41:20,060 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.04s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:41:20,060 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.04s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+
+Optimising conformer:  71%|███████████████      | 10/14 [03:16<02:32, 38.23s/it][A
+Optimising conformer:  79%|████████████████▌    | 11/14 [03:21<01:24, 28.01s/it][ATIME Completed the molecule generation in 156.0s.
+TIME changed dir: 0.0s
+Generated 19 conformers. 
+Removed 11 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]
+Optimising conformer:  86%|██████████████████   | 12/14 [03:29<00:43, 21.99s/it][AOptimising conformer:  12%|██▉                    | 1/8 [00:03<00:26,  3.81s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:05<00:16,  2.75s/it]Optimising conformer:  38%|████████▋              | 3/8 [00:07<00:12,  2.44s/it]
+Optimising conformer:  93%|███████████████████▌ | 13/14 [03:36<00:17, 17.37s/it][AOptimising conformer:  50%|███████████▌           | 4/8 [00:11<00:11,  2.82s/it]
+Optimising conformer: 100%|█████████████████████| 14/14 [03:41<00:00, 13.72s/it][AOptimising conformer: 100%|█████████████████████| 14/14 [03:41<00:00, 15.83s/it]
+Optimising conformer:  62%|██████████████▍        | 5/8 [00:15<00:10,  3.48s/it]2024-02-01 08:42:20,572 - distributed.core - INFO - Event loop was unresponsive in Nanny for 23.40s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:42:45,398 - distributed.core - INFO - Event loop was unresponsive in Nanny for 24.73s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:42:57,090 - distributed.core - INFO - Event loop was unresponsive in Worker for 58.42s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:42:57,090 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 58.42s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:43:01,591 - distributed.core - INFO - Event loop was unresponsive in Nanny for 16.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:43:01,616 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.91s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:43:01,616 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.91s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/code/gal/sars-cov-2-main-protease-al-study-combo1/rsearcher.py:89: UserWarning: The ligand was an array (SDF?). Using the first frame. 
+  warnings.warn("The ligand was an array (SDF?). Using the first frame. ")
+Optimising conformer:  75%|█████████████████▎     | 6/8 [01:25<00:51, 25.93s/it]Optimising conformer:  88%|████████████████████▏  | 7/8 [01:27<00:17, 17.97s/it]Optimising conformer: 100%|███████████████████████| 8/8 [01:28<00:00, 12.70s/it]Optimising conformer: 100%|███████████████████████| 8/8 [01:28<00:00, 11.06s/it]
+2024-02-01 08:43:21,176 - distributed.core - INFO - Event loop was unresponsive in Worker for 10.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:43:21,176 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 10.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:43:35,036 - distributed.core - INFO - Event loop was unresponsive in Nanny for 23.60s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:44:00,243 - distributed.core - INFO - Event loop was unresponsive in Nanny for 25.19s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:44:10,589 - distributed.core - INFO - Event loop was unresponsive in Nanny for 10.63s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:44:10,600 - distributed.core - INFO - Event loop was unresponsive in Worker for 49.93s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:44:10,600 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 49.93s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:44:50,969 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:44:50,969 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 3.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:44:52,235 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:45:17,011 - distributed.core - INFO - Event loop was unresponsive in Nanny for 25.22s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:45:17,148 - distributed.core - INFO - Event loop was unresponsive in Worker for 26.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 08:45:17,148 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 26.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:04:52,328 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.85s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:04:52,328 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.85s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:05:13,265 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.19s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:05:13,265 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 5.19s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:27,925 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.70s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:27,925 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 5.70s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:36,978 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.41s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:36,980 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.32s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:36,980 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.32s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:40,942 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:44,927 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:44,927 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 3.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:52,297 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.00s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:55,777 - distributed.core - INFO - Event loop was unresponsive in Worker for 9.58s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:55,777 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 9.58s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:09:56,952 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.83s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:01,974 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:01,984 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.47s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:01,984 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.47s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:18,992 - distributed.core - INFO - Event loop was unresponsive in Nanny for 14.51s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:31,615 - distributed.core - INFO - Event loop was unresponsive in Nanny for 12.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:44,025 - distributed.core - INFO - Event loop was unresponsive in Worker for 38.25s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:44,367 - distributed.core - INFO - Event loop was unresponsive in Nanny for 12.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:44,025 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 38.25s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:55,523 - distributed.core - INFO - Event loop was unresponsive in Nanny for 11.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:57,188 - distributed.core - INFO - Event loop was unresponsive in Worker for 13.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:10:57,188 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 13.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:09,523 - distributed.core - INFO - Event loop was unresponsive in Nanny for 11.51s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:24,525 - distributed.core - INFO - Event loop was unresponsive in Nanny for 14.90s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:29,454 - distributed.core - INFO - Event loop was unresponsive in Worker for 31.39s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:29,454 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 31.39s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:38,109 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.57s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:39,021 - distributed.core - INFO - Event loop was unresponsive in Worker for 9.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:39,021 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 9.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:43,967 - distributed.core - INFO - Event loop was unresponsive in Worker for 3.66s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:43,967 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 3.66s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:48,547 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:48,547 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:11:59,666 - distributed.core - INFO - Event loop was unresponsive in Nanny for 14.54s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:12:17,075 - distributed.core - INFO - Event loop was unresponsive in Nanny for 17.34s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:12:34,740 - distributed.core - INFO - Event loop was unresponsive in Nanny for 17.83s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:12:41,815 - distributed.core - INFO - Event loop was unresponsive in Worker for 53.12s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:12:41,815 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 53.12s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:12:48,720 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.88s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:13:01,843 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.13s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:13:16,433 - distributed.core - INFO - Event loop was unresponsive in Nanny for 14.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:13:29,336 - distributed.core - INFO - Event loop was unresponsive in Worker for 47.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:13:29,336 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 47.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:13:29,854 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:13:43,731 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.89s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:13:56,912 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:03,073 - distributed.core - INFO - Event loop was unresponsive in Worker for 33.85s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:03,072 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:03,073 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 33.85s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:07,814 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:22,330 - distributed.core - INFO - Event loop was unresponsive in Worker for 18.95s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:22,330 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 18.95s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:22,525 - distributed.core - INFO - Event loop was unresponsive in Nanny for 14.95s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:28,251 - distributed.core - INFO - Event loop was unresponsive in Worker for 4.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:14:28,251 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 4.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:16:19,016 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.15s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:16:19,022 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.47s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:16:19,022 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.47s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:16:32,335 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.99s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:16:32,335 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 7.99s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:16:37,640 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.05s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:16:47,070 - distributed.core - INFO - Event loop was unresponsive in Nanny for 9.53s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:17:10,630 - distributed.core - INFO - Event loop was unresponsive in Nanny for 23.34s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:17:14,149 - distributed.core - INFO - Event loop was unresponsive in Worker for 41.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:17:14,149 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 41.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:17:31,453 - distributed.core - INFO - Event loop was unresponsive in Nanny for 20.85s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:17:36,007 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.74s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:17:36,049 - distributed.core - INFO - Event loop was unresponsive in Worker for 22.22s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:17:36,049 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 22.22s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:17:55,584 - distributed.core - INFO - Event loop was unresponsive in Nanny for 18.53s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:18:02,877 - distributed.core - INFO - Event loop was unresponsive in Worker for 26.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:18:02,877 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 26.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:18:19,313 - distributed.core - INFO - Event loop was unresponsive in Nanny for 23.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:18:41,358 - distributed.core - INFO - Event loop was unresponsive in Nanny for 22.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:19:01,950 - distributed.core - INFO - Event loop was unresponsive in Nanny for 20.90s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:19:02,011 - distributed.core - INFO - Event loop was unresponsive in Worker for 59.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:19:02,011 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 59.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:19:11,596 - distributed.core - INFO - Event loop was unresponsive in Worker for 9.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:19:11,596 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 9.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:19:22,354 - distributed.core - INFO - Event loop was unresponsive in Nanny for 18.68s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:19:45,173 - distributed.core - INFO - Event loop was unresponsive in Nanny for 22.84s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:07,513 - distributed.core - INFO - Event loop was unresponsive in Nanny for 22.40s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:31,538 - distributed.core - INFO - Event loop was unresponsive in Nanny for 24.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:31,643 - distributed.core - INFO - Event loop was unresponsive in Worker for 79.89s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:31,643 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 79.89s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:44,994 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.68s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:45,196 - distributed.core - INFO - Event loop was unresponsive in Worker for 13.94s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:45,196 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 13.94s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:53,341 - distributed.core - INFO - Event loop was unresponsive in Worker for 7.46s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:53,341 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 7.46s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:57,917 - distributed.core - INFO - Event loop was unresponsive in Nanny for 11.40s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:57,938 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:20:57,938 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 5.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:21:03,229 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:21:03,951 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.92s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:21:03,951 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 5.92s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:23:05,503 [WARNING] [rdkit_wrapper.py:3213] openff.toolkit.utils.rdkit_wrapper: Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 2)
+
+2024-02-01 09:23:36,863 - distributed.core - INFO - Event loop was unresponsive in Worker for 43.26s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:23:36,863 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 43.26s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:25:38,021 - distributed.core - INFO - Event loop was unresponsive in Worker for 121.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:25:38,021 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 121.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:05,451 - distributed.core - INFO - Event loop was unresponsive in Worker for 27.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:05,451 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 27.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:11,440 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.05s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:11,440 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.05s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+2024-02-01 09:26:19,998 - distributed.core - INFO - Event loop was unresponsive in Worker for 6.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:19,998 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 6.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:25,129 - distributed.core - INFO - Event loop was unresponsive in Worker for 5.13s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:25,129 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 5.13s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:39,577 - distributed.core - INFO - Event loop was unresponsive in Worker for 14.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:26:39,577 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 14.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:28:09,163 - distributed.core - INFO - Event loop was unresponsive in Worker for 89.59s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:28:09,163 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 89.59s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:28:21,163 - distributed.core - INFO - Event loop was unresponsive in Worker for 12.00s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:28:21,163 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 12.00s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:28:44,867 - distributed.core - INFO - Event loop was unresponsive in Worker for 23.70s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:28:44,867 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 23.70s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:29:14,013 - distributed.core - INFO - Event loop was unresponsive in Worker for 29.15s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:29:14,013 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 29.15s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:29:39,274 - distributed.core - INFO - Event loop was unresponsive in Worker for 25.26s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:29:39,274 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 25.26s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:30:15,067 - distributed.core - INFO - Event loop was unresponsive in Worker for 35.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:30:15,067 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 35.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:31:13,085 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.08s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:31:40,542 - distributed.core - INFO - Event loop was unresponsive in Worker for 85.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:31:40,542 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 85.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:31:52,681 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:32:19,117 - distributed.core - INFO - Event loop was unresponsive in Worker for 38.50s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:32:19,117 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 38.50s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:32:28,028 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.72s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:33:13,754 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.80s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:33:41,922 - distributed.core - INFO - Event loop was unresponsive in Worker for 82.88s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:33:41,922 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 82.88s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:33:54,371 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:34:10,849 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.82s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:34:22,899 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.98s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:34:31,928 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.08s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:34:41,055 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.04s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:34:51,153 - distributed.core - INFO - Event loop was unresponsive in Worker for 69.23s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:34:51,153 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 69.23s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:35:01,931 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.87s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:35:15,965 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:35:29,969 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.04s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:35:38,040 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.13s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:35:38,121 - distributed.core - INFO - Event loop was unresponsive in Worker for 46.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:35:38,121 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 46.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:35:46,932 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.63s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:36:09,986 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.91s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:36:16,926 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:36:24,009 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:36:38,044 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.60s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:36:45,494 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.69s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:36:52,466 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:01,093 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:06,077 - distributed.core - INFO - Event loop was unresponsive in Worker for 87.93s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:06,077 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 87.93s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:08,583 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:14,916 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.57s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:28,940 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.50s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:33,003 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.35s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:39,081 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.82s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:43,969 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.00s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:37:55,995 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.65s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:03,983 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.62s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:07,605 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.46s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:20,236 - distributed.core - INFO - Event loop was unresponsive in Worker for 74.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:20,236 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 74.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:26,369 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:40,945 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.50s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:46,053 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.66s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:51,217 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:38:58,920 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:39:02,609 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.70s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:39:14,069 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.05s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:39:26,210 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:39:29,196 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.78s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:39:37,025 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:39:43,897 - distributed.core - INFO - Event loop was unresponsive in Worker for 83.66s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:39:43,897 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 83.66s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:39:59,123 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.51s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:40:24,249 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:40:31,676 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.68s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:40:44,260 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.34s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:02,442 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:11,918 - distributed.core - INFO - Event loop was unresponsive in Worker for 87.68s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:11,988 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.44s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:11,918 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 87.68s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:17,938 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.75s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:22,703 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.52s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:28,942 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.35s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:33,952 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.50s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:36,999 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:45,122 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:49,971 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.04s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:59,067 - distributed.core - INFO - Event loop was unresponsive in Worker for 47.49s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:41:59,067 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 47.49s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:42:05,976 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.44s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:42:12,999 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:42:26,347 - distributed.core - INFO - Event loop was unresponsive in Nanny for 13.21s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:42:30,167 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.93s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:42:35,778 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:42:49,169 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.23s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:01,182 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.92s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:05,254 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:12,136 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.11s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:18,073 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:18,125 - distributed.core - INFO - Event loop was unresponsive in Worker for 79.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:18,125 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 79.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:29,998 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.48s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:36,962 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:42,916 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.13s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:43:50,894 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.14s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:01,026 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.25s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:06,419 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.31s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:10,285 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.87s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:21,038 - distributed.core - INFO - Event loop was unresponsive in Worker for 62.91s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:21,038 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 62.91s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:32,923 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.45s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:40,131 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.53s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:44,161 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.65s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:44:57,038 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:05,187 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:10,275 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:17,622 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.98s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:25,871 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.82s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:30,671 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.76s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:40,007 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.06s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:48,073 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.46s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:57,010 - distributed.core - INFO - Event loop was unresponsive in Worker for 95.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:57,010 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.42s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:45:57,010 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 95.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:04,604 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.73s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:11,924 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.54s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:18,955 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.60s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:27,954 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.99s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:31,692 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.39s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:41,636 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.15s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:45,232 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.62s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:50,191 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.92s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:46:57,125 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:01,334 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.85s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:06,973 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.49s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:12,071 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.10s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:16,018 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.84s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:22,320 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:29,278 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.14s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:42,965 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.36s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:47,967 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:52,942 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.24s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:47:56,562 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.61s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:00,972 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.39s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:11,448 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.41s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:20,413 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.20s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:24,402 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.26s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:28,232 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.63s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:39,028 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.12s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:44,388 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.30s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:39,028 - distributed.core - INFO - Event loop was unresponsive in Worker for 162.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:39,028 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 162.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:48:59,940 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.24s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:49:09,055 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.39s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:49:14,934 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.96s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:49:25,947 - distributed.core - INFO - Event loop was unresponsive in Nanny for 9.17s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:49:33,282 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.15s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:49:39,324 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.63s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:49:52,598 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.99s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:01,001 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:06,056 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:15,973 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.00s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:22,954 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.18s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:34,272 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.29s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:39,968 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.98s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:44,021 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.76s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:50,079 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:50:57,959 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.03s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:51:10,597 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.90s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:51:19,633 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:51:27,138 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.08s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:51:36,124 - distributed.core - INFO - Event loop was unresponsive in Nanny for 8.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:51:41,802 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.55s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:51:49,224 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.37s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:51:54,110 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.07s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:00,017 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.36s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:07,980 - distributed.core - INFO - Event loop was unresponsive in Worker for 208.95s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:07,980 [INFO] [core.py:595] distributed.core: Event loop was unresponsive in Worker for 208.95s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:16,963 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.98s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:30,051 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:35,978 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:39,124 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.15s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:46,087 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.79s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:50,966 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.64s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:52:59,029 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.97s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:53:04,927 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.90s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:53:10,143 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.35s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:53:18,088 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.96s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:53:31,945 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.01s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:53:43,826 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.35s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:53:52,206 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.38s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:53:55,800 - distributed.core - INFO - Event loop was unresponsive in Nanny for 3.75s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:54:05,005 - distributed.core - INFO - Event loop was unresponsive in Nanny for 6.67s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:54:12,261 - distributed.core - INFO - Event loop was unresponsive in Nanny for 5.27s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:54:17,194 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.16s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:54:29,245 - distributed.core - INFO - Event loop was unresponsive in Nanny for 4.84s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-02-01 09:54:42,369 - distributed.core - INFO - Event loop was unresponsive in Nanny for 7.25s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+slurmstepd: error: *** JOB 19912147 ON sb094 CANCELLED AT 2024-02-01T09:54:42 ***

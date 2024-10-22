@@ -1,0 +1,859 @@
+hostname sb092.cluster
+ipconfig 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo valid_lft forever preferred_lft forever inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: enp4s0f0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000 link/ether a0:8c:f8:34:c8:28 brd ff:ff:ff:ff:ff:ff inet 10.3.81.172/22 brd 10.3.83.255 scope global enp4s0f0 valid_lft forever preferred_lft forever inet6 fe80::a28c:f8ff:fe34:c828/64 scope link valid_lft forever preferred_lft forever 3: enp4s0f1: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c8:29 brd ff:ff:ff:ff:ff:ff 4: enp4s0f2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c8:2a brd ff:ff:ff:ff:ff:ff 5: enp4s0f3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000 link/ether a0:8c:f8:34:c8:2b brd ff:ff:ff:ff:ff:ff 6: ib0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 4092 qdisc pfifo_fast state UP group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f2:80 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff inet 10.3.89.172/22 brd 10.3.91.255 scope global ib0 valid_lft forever preferred_lft forever inet 10.3.97.172/22 brd 10.3.99.255 scope global ib0:1 valid_lft forever preferred_lft forever inet6 fe80::3abc:103:4c:f280/64 scope link valid_lft forever preferred_lft forever 7: ib1: <BROADCAST,MULTICAST> mtu 4092 qdisc noop state DOWN group default qlen 256 link/infiniband 80:00:00:29:fe:80:00:00:00:00:00:00:38:bc:01:03:00:4c:f2:81 brd 00:ff:ff:ff:ff:12:40:1b:ff:ff:00:00:00:00:00:00:ff:ff:ff:ff
+2024-01-18 18:03:19,338 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.172:41585'
+2024-01-18 18:03:19,348 - distributed.nanny - INFO -         Start Nanny at: 'tcp://10.3.89.172:40759'
+2024-01-18 18:03:23,024 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.172:34048
+2024-01-18 18:03:23,024 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.172:34048
+2024-01-18 18:03:23,025 - distributed.worker - INFO -           Worker name:         SLURMCluster-244-1
+2024-01-18 18:03:23,025 - distributed.worker - INFO -          dashboard at:          10.3.89.172:35181
+2024-01-18 18:03:23,024 - distributed.worker - INFO -       Start worker at:    tcp://10.3.89.172:33877
+2024-01-18 18:03:23,025 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:42763
+2024-01-18 18:03:23,025 - distributed.worker - INFO -          Listening to:    tcp://10.3.89.172:33877
+2024-01-18 18:03:23,025 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 18:03:23,025 - distributed.worker - INFO -           Worker name:         SLURMCluster-244-0
+2024-01-18 18:03:23,025 - distributed.worker - INFO -          dashboard at:          10.3.89.172:34091
+2024-01-18 18:03:23,025 - distributed.worker - INFO -               Threads:                          2
+2024-01-18 18:03:23,025 - distributed.worker - INFO - Waiting to connect to:     tcp://10.3.88.12:42763
+2024-01-18 18:03:23,025 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-18 18:03:23,025 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 18:03:23,025 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-r402cy7t
+2024-01-18 18:03:23,025 - distributed.worker - INFO -               Threads:                          2
+2024-01-18 18:03:23,025 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 18:03:23,025 - distributed.worker - INFO -                Memory:                  10.24 GiB
+2024-01-18 18:03:23,025 - distributed.worker - INFO -       Local Directory: /scratch/dask-worker-space/worker-5eteqbwp
+2024-01-18 18:03:23,025 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 18:03:23,056 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:42763
+2024-01-18 18:03:23,056 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 18:03:23,056 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:42763
+2024-01-18 18:03:23,058 - distributed.worker - INFO -         Registered to:     tcp://10.3.88.12:42763
+2024-01-18 18:03:23,058 - distributed.worker - INFO - -------------------------------------------------
+2024-01-18 18:03:23,058 - distributed.core - INFO - Starting established connection to tcp://10.3.88.12:42763
+2024-01-18 18:21:50,495 - distributed.core - INFO - Event loop was unresponsive in Worker for 15.02s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 8 conformers. 
+Removed 2 conformers. 
+Generated 32 conformers. 
+Removed 24 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/6 [00:00<?, ?it/s][W BinaryOps.cpp:601] Warning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (function operator())
+Optimising conformer:  17%|███▊                   | 1/6 [00:03<00:16,  3.40s/it]Optimising conformer:  33%|███████▋               | 2/6 [00:04<00:08,  2.09s/it]Optimising conformer:  50%|███████████▌           | 3/6 [00:07<00:06,  2.28s/it]Optimising conformer:  67%|███████████████▎       | 4/6 [00:08<00:03,  2.00s/it]Optimising conformer:  83%|███████████████████▏   | 5/6 [00:15<00:03,  3.62s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:17<00:00,  3.25s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:17<00:00,  2.95s/it]
+TIME Completed the molecule generation in 54.9s.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]Optimising conformer:  12%|██▉                    | 1/8 [00:02<00:15,  2.27s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:04<00:11,  1.96s/it]Optimising conformer:  38%|████████▋              | 3/8 [00:05<00:08,  1.66s/it]Optimising conformer:  50%|███████████▌           | 4/8 [00:10<00:11,  2.99s/it]Optimising conformer:  62%|██████████████▍        | 5/8 [00:14<00:10,  3.56s/it]Optimising conformer:  75%|█████████████████▎     | 6/8 [00:18<00:07,  3.57s/it]Optimising conformer:  88%|████████████████████▏  | 7/8 [00:20<00:02,  3.00s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:21<00:00,  2.46s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:21<00:00,  2.71s/it]
+2024-01-18 19:32:15,806 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.113:41596
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.113:41596 after 30 s
+2024-01-18 19:32:15,849 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.113:41812
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.113:41812 after 30 s
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 208.5s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 15 conformers. 
+Generated 47 conformers. 
+Removed 7 conformers. 
+Removed 38 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]Optimising conformer:  12%|██▉                    | 1/8 [00:03<00:22,  3.21s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:05<00:15,  2.61s/it]Optimising conformer:  38%|████████▋              | 3/8 [00:07<00:12,  2.52s/it]Optimising conformer:  50%|███████████▌           | 4/8 [00:10<00:10,  2.60s/it]Optimising conformer:  62%|██████████████▍        | 5/8 [00:12<00:07,  2.48s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/9 [00:00<?, ?it/s][AOptimising conformer:  75%|█████████████████▎     | 6/8 [00:15<00:05,  2.51s/it]Optimising conformer:  88%|████████████████████▏  | 7/8 [00:17<00:02,  2.45s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:20<00:00,  2.42s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:20<00:00,  2.50s/it]
+
+Optimising conformer:  11%|██▌                    | 1/9 [00:05<00:45,  5.72s/it][A
+Optimising conformer:  22%|█████                  | 2/9 [00:07<00:22,  3.22s/it][A
+Optimising conformer:  33%|███████▋               | 3/9 [00:09<00:16,  2.68s/it][A
+Optimising conformer:  44%|██████████▏            | 4/9 [00:10<00:11,  2.22s/it][A
+Optimising conformer:  56%|████████████▊          | 5/9 [00:12<00:08,  2.19s/it][A
+Optimising conformer:  67%|███████████████▎       | 6/9 [00:15<00:06,  2.18s/it][A
+Optimising conformer:  78%|█████████████████▉     | 7/9 [00:27<00:10,  5.47s/it][A
+Optimising conformer:  89%|████████████████████▍  | 8/9 [00:29<00:04,  4.53s/it][A
+Optimising conformer: 100%|███████████████████████| 9/9 [00:35<00:00,  4.86s/it][AOptimising conformer: 100%|███████████████████████| 9/9 [00:35<00:00,  3.93s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 93.7s.
+TIME Completed the molecule generation in 116.8s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 15 conformers. 
+Generated 47 conformers. 
+Removed 7 conformers. 
+Removed 34 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]Optimising conformer:  12%|██▉                    | 1/8 [00:03<00:23,  3.42s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:05<00:16,  2.79s/it]Optimising conformer:  38%|████████▋              | 3/8 [00:07<00:11,  2.24s/it]Optimising conformer:  50%|███████████▌           | 4/8 [00:10<00:10,  2.58s/it]Optimising conformer:  62%|██████████████▍        | 5/8 [00:13<00:08,  2.78s/it]Optimising conformer:  75%|█████████████████▎     | 6/8 [00:15<00:05,  2.65s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                              | 0/13 [00:00<?, ?it/s][AOptimising conformer:  88%|████████████████████▏  | 7/8 [00:17<00:02,  2.31s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:20<00:00,  2.37s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:20<00:00,  2.51s/it]
+
+Optimising conformer:   8%|█▋                    | 1/13 [00:04<00:53,  4.43s/it][A
+Optimising conformer:  15%|███▍                  | 2/13 [00:07<00:39,  3.63s/it][A
+Optimising conformer:  23%|█████                 | 3/13 [00:09<00:29,  2.94s/it][A
+Optimising conformer:  31%|██████▊               | 4/13 [00:12<00:26,  2.92s/it][A
+Optimising conformer:  38%|████████▍             | 5/13 [00:14<00:21,  2.71s/it][A
+Optimising conformer:  46%|██████████▏           | 6/13 [00:16<00:17,  2.48s/it][A
+Optimising conformer:  54%|███████████▊          | 7/13 [00:18<00:13,  2.19s/it][A
+Optimising conformer:  62%|█████████████▌        | 8/13 [00:20<00:10,  2.09s/it][A
+Optimising conformer:  69%|███████████████▏      | 9/13 [00:23<00:09,  2.27s/it][A
+Optimising conformer:  77%|████████████████▏    | 10/13 [00:24<00:06,  2.10s/it][A
+Optimising conformer:  85%|█████████████████▊   | 11/13 [00:38<00:11,  5.82s/it][A
+Optimising conformer:  92%|███████████████████▍ | 12/13 [00:41<00:04,  4.78s/it][A
+Optimising conformer: 100%|█████████████████████| 13/13 [00:45<00:00,  4.54s/it][AOptimising conformer: 100%|█████████████████████| 13/13 [00:45<00:00,  3.49s/it]
+2024-01-18 20:54:46,159 - distributed.core - INFO - Event loop was unresponsive in Worker for 69.09s.  This is often caused by long-running GIL-holding functions or moving large chunks of data. This can cause timeouts and instability.
+2024-01-18 20:54:46,378 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.172:54112 closed before handshake completed
+2024-01-18 20:54:46,379 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.172:54114 closed before handshake completed
+2024-01-18 20:54:46,379 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.118:51458 closed before handshake completed
+2024-01-18 20:54:46,379 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.102:52142 closed before handshake completed
+2024-01-18 20:54:46,379 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.184:53176 closed before handshake completed
+2024-01-18 20:54:46,379 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.110:57508 closed before handshake completed
+2024-01-18 20:54:46,379 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.124:35784 closed before handshake completed
+2024-01-18 20:54:46,380 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.175:57672 closed before handshake completed
+2024-01-18 20:54:46,380 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.136:36684 closed before handshake completed
+2024-01-18 20:54:46,380 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.136:36686 closed before handshake completed
+2024-01-18 20:54:46,380 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.101:35394 closed before handshake completed
+2024-01-18 20:54:46,380 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.110:57512 closed before handshake completed
+2024-01-18 20:54:46,380 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.121:33096 closed before handshake completed
+2024-01-18 20:54:46,380 - distributed.comm.tcp - INFO - Connection from tcp://10.3.89.110:57516 closed before handshake completed
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/__init__.py:55: UserWarning: Dependency not satisfied, torchani.ase will not be available
+  warnings.warn("Dependency not satisfied, torchani.ase will not be available")
+Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 16 conformers. 
+Removed 10 conformers. 
+Generated 32 conformers. 
+Removed 16 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/6 [00:00<?, ?it/s][W BinaryOps.cpp:601] Warning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (function operator())
+Optimising conformer:  17%|███▊                   | 1/6 [00:02<00:14,  2.94s/it]TIME Completed the molecule generation in 66.4s.
+TIME Completed the molecule generation in 112.7s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 15 conformers. 
+Generated 8 conformers. 
+Removed 5 conformers. 
+Removed 9 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/6 [00:00<?, ?it/s]
+Optimising conformer:   0%|                               | 0/3 [00:00<?, ?it/s][AOptimising conformer:  33%|███████▋               | 2/6 [00:04<00:08,  2.10s/it]
+Optimising conformer:  33%|███████▋               | 1/3 [00:03<00:06,  3.29s/it][AOptimising conformer:  17%|███▊                   | 1/6 [00:03<00:19,  3.82s/it]Optimising conformer:  50%|███████████▌           | 3/6 [00:06<00:06,  2.23s/it]Optimising conformer:  33%|███████▋               | 2/6 [00:05<00:10,  2.64s/it]
+Optimising conformer:  67%|███████████████▎       | 2/3 [00:05<00:02,  2.67s/it][AOptimising conformer:  67%|███████████████▎       | 4/6 [00:09<00:04,  2.30s/it]
+Optimising conformer: 100%|███████████████████████| 3/3 [00:07<00:00,  2.31s/it][AOptimising conformer: 100%|███████████████████████| 3/3 [00:07<00:00,  2.47s/it]
+Optimising conformer:  83%|███████████████████▏   | 5/6 [00:11<00:02,  2.11s/it]Optimising conformer:  50%|███████████▌           | 3/6 [00:08<00:08,  2.76s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:12<00:00,  1.94s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:12<00:00,  2.11s/it]
+Optimising conformer:  67%|███████████████▎       | 4/6 [00:10<00:05,  2.56s/it]Optimising conformer:  83%|███████████████████▏   | 5/6 [00:12<00:02,  2.38s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:15<00:00,  2.39s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:15<00:00,  2.54s/it]
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/16 [00:00<?, ?it/s]Optimising conformer:   6%|█▍                    | 1/16 [00:06<01:37,  6.50s/it]Optimising conformer:  12%|██▊                   | 2/16 [00:11<01:17,  5.54s/it]Optimising conformer:  19%|████▏                 | 3/16 [00:14<00:56,  4.33s/it]Optimising conformer:  25%|█████▌                | 4/16 [00:17<00:44,  3.74s/it]Optimising conformer:  31%|██████▉               | 5/16 [00:20<00:38,  3.47s/it]Optimising conformer:  38%|████████▎             | 6/16 [00:24<00:37,  3.78s/it]Optimising conformer:  44%|█████████▋            | 7/16 [00:27<00:30,  3.41s/it]Optimising conformer:  50%|███████████           | 8/16 [00:30<00:26,  3.25s/it]Optimising conformer:  56%|████████████▍         | 9/16 [00:33<00:22,  3.18s/it]Optimising conformer:  62%|█████████████▏       | 10/16 [00:36<00:18,  3.16s/it]Optimising conformer:  69%|██████████████▍      | 11/16 [00:39<00:15,  3.08s/it]Optimising conformer:  75%|███████████████▊     | 12/16 [00:42<00:12,  3.06s/it]Optimising conformer:  81%|█████████████████    | 13/16 [00:45<00:09,  3.29s/it]Optimising conformer:  88%|██████████████████▍  | 14/16 [00:50<00:07,  3.83s/it]Optimising conformer:  94%|███████████████████▋ | 15/16 [00:54<00:03,  3.88s/it]Optimising conformer: 100%|█████████████████████| 16/16 [00:57<00:00,  3.52s/it]Optimising conformer: 100%|█████████████████████| 16/16 [00:57<00:00,  3.60s/it]
+2024-01-18 21:08:51,346 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.190:44627
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.190:44627 after 30 s
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 64.7s.
+TIME Completed the molecule generation in 75.0s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 8 conformers. 
+Removed 6 conformers. 
+Generated 30 conformers. 
+Removed 23 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/7 [00:00<?, ?it/s]Optimising conformer:  14%|███▎                   | 1/7 [00:02<00:15,  2.65s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/2 [00:00<?, ?it/s][A
+Optimising conformer:  50%|███████████▌           | 1/2 [00:03<00:03,  3.07s/it][A
+Optimising conformer: 100%|███████████████████████| 2/2 [00:05<00:00,  2.44s/it][AOptimising conformer: 100%|███████████████████████| 2/2 [00:05<00:00,  2.54s/it]
+Optimising conformer:  29%|██████▌                | 2/7 [00:48<02:20, 28.02s/it]Optimising conformer:  43%|█████████▊             | 3/7 [00:49<01:03, 15.87s/it]Optimising conformer:  57%|█████████████▏         | 4/7 [00:51<00:30, 10.07s/it]Optimising conformer:  71%|████████████████▍      | 5/7 [00:54<00:15,  7.66s/it]Optimising conformer:  86%|███████████████████▋   | 6/7 [00:55<00:05,  5.50s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:57<00:00,  4.41s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:57<00:00,  8.27s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 11)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Undefined chiral centers are:
+ - Atom C (index 11)
+
+TIME Completed the molecule generation in 121.4s.
+TIME Completed the molecule generation in 163.3s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 15 conformers. 
+Generated 25 conformers. 
+Removed 10 conformers. 
+Removed 17 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+using ani2x
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:04<00:19,  4.85s/it]/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s][AOptimising conformer:  40%|█████████▏             | 2/5 [00:06<00:09,  3.21s/it]
+Optimising conformer:  12%|██▉                    | 1/8 [00:02<00:19,  2.84s/it][AOptimising conformer:  60%|█████████████▊         | 3/5 [00:10<00:06,  3.27s/it]
+Optimising conformer:  25%|█████▊                 | 2/8 [00:05<00:15,  2.54s/it][AOptimising conformer:  80%|██████████████████▍    | 4/5 [00:12<00:02,  2.68s/it]
+Optimising conformer:  38%|████████▋              | 3/8 [00:06<00:10,  2.14s/it][AOptimising conformer: 100%|███████████████████████| 5/5 [00:13<00:00,  2.35s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:13<00:00,  2.76s/it]
+
+Optimising conformer:  50%|███████████▌           | 4/8 [00:08<00:07,  1.98s/it][A
+Optimising conformer:  62%|██████████████▍        | 5/8 [00:11<00:07,  2.47s/it][A
+Optimising conformer:  75%|█████████████████▎     | 6/8 [00:17<00:06,  3.43s/it][A
+Optimising conformer:  88%|████████████████████▏  | 7/8 [00:18<00:02,  2.83s/it][A
+Optimising conformer: 100%|███████████████████████| 8/8 [00:21<00:00,  2.64s/it][AOptimising conformer: 100%|███████████████████████| 8/8 [00:21<00:00,  2.63s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 69.8s.
+TIME Completed the molecule generation in 80.2s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 29 conformers. 
+Removed 16 conformers. 
+Generated 39 conformers. 
+Removed 23 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+Optimising conformer:   0%|                              | 0/16 [00:00<?, ?it/s]Optimising conformer:   6%|█▍                    | 1/16 [00:02<00:42,  2.80s/it]failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                              | 0/13 [00:00<?, ?it/s][AOptimising conformer:  12%|██▊                   | 2/16 [00:04<00:31,  2.23s/it]Optimising conformer:  19%|████▏                 | 3/16 [00:06<00:26,  2.01s/it]
+Optimising conformer:   8%|█▋                    | 1/13 [00:02<00:29,  2.47s/it][AOptimising conformer:  25%|█████▌                | 4/16 [00:08<00:23,  1.93s/it]
+Optimising conformer:  15%|███▍                  | 2/13 [00:04<00:22,  2.02s/it][AOptimising conformer:  31%|██████▉               | 5/16 [00:09<00:20,  1.88s/it]Optimising conformer:  38%|████████▎             | 6/16 [00:11<00:18,  1.85s/it]Optimising conformer:  44%|█████████▋            | 7/16 [00:13<00:16,  1.83s/it]Optimising conformer:  50%|███████████           | 8/16 [00:15<00:14,  1.82s/it]
+Optimising conformer:  23%|█████                 | 3/13 [00:12<00:46,  4.68s/it][AOptimising conformer:  56%|████████████▍         | 9/16 [00:17<00:12,  1.80s/it]
+Optimising conformer:  31%|██████▊               | 4/13 [00:13<00:30,  3.38s/it][AOptimising conformer:  62%|█████████████▏       | 10/16 [00:18<00:10,  1.80s/it]
+Optimising conformer:  38%|████████▍             | 5/13 [00:14<00:21,  2.68s/it][AOptimising conformer:  69%|██████████████▍      | 11/16 [00:20<00:08,  1.66s/it]
+Optimising conformer:  46%|██████████▏           | 6/13 [00:17<00:17,  2.56s/it][AOptimising conformer:  75%|███████████████▊     | 12/16 [00:22<00:06,  1.72s/it]
+Optimising conformer:  54%|███████████▊          | 7/13 [00:18<00:13,  2.24s/it][A
+Optimising conformer:  62%|█████████████▌        | 8/13 [00:20<00:09,  1.97s/it][AOptimising conformer:  81%|█████████████████    | 13/16 [00:25<00:06,  2.17s/it]
+Optimising conformer:  69%|███████████████▏      | 9/13 [00:21<00:07,  1.87s/it][AOptimising conformer:  88%|██████████████████▍  | 14/16 [00:27<00:04,  2.06s/it]
+Optimising conformer:  77%|████████████████▏    | 10/13 [00:23<00:05,  1.82s/it][A
+Optimising conformer:  85%|█████████████████▊   | 11/13 [00:24<00:03,  1.69s/it][AOptimising conformer:  94%|███████████████████▋ | 15/16 [00:30<00:02,  2.44s/it]
+Optimising conformer:  92%|███████████████████▍ | 12/13 [00:26<00:01,  1.70s/it][AOptimising conformer: 100%|█████████████████████| 16/16 [00:32<00:00,  2.29s/it]Optimising conformer: 100%|█████████████████████| 16/16 [00:32<00:00,  2.02s/it]
+
+Optimising conformer: 100%|█████████████████████| 13/13 [00:28<00:00,  1.75s/it][AOptimising conformer: 100%|█████████████████████| 13/13 [00:28<00:00,  2.19s/it]
+2024-01-19 01:05:27,595 - distributed.utils_perf - INFO - full garbage collection released 35.99 MiB from 465543 reference cycles (threshold: 9.54 MiB)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 103.1s.
+TIME Completed the molecule generation in 112.5s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 4 conformers. 
+Removed 3 conformers. 
+Generated 15 conformers. 
+Removed 9 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/1 [00:00<?, ?it/s]Optimising conformer: 100%|███████████████████████| 1/1 [00:02<00:00,  2.22s/it]Optimising conformer: 100%|███████████████████████| 1/1 [00:02<00:00,  2.22s/it]
+TIME Completed the molecule generation in 70.7s.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/6 [00:00<?, ?it/s]Optimising conformer:  17%|███▊                   | 1/6 [00:02<00:10,  2.15s/it]Optimising conformer:  33%|███████▋               | 2/6 [00:03<00:07,  1.82s/it]Optimising conformer:  50%|███████████▌           | 3/6 [00:05<00:05,  1.71s/it]Optimising conformer:  67%|███████████████▎       | 4/6 [00:06<00:02,  1.49s/it]Optimising conformer:  83%|███████████████████▏   | 5/6 [00:07<00:01,  1.38s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:08<00:00,  1.29s/it]Optimising conformer: 100%|███████████████████████| 6/6 [00:08<00:00,  1.46s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 96.4s.
+TIME changed dir: 0.0s
+Generated 30 conformers. 
+Removed 15 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/15 [00:00<?, ?it/s]Optimising conformer:   7%|█▍                    | 1/15 [00:05<01:20,  5.77s/it]Optimising conformer:  13%|██▉                   | 2/15 [00:07<00:44,  3.44s/it]Optimising conformer:  20%|████▍                 | 3/15 [00:11<00:45,  3.81s/it]Optimising conformer:  27%|█████▊                | 4/15 [00:13<00:32,  3.00s/it]Optimising conformer:  33%|███████▎              | 5/15 [00:15<00:27,  2.70s/it]Optimising conformer:  40%|████████▊             | 6/15 [00:17<00:22,  2.49s/it]Optimising conformer:  47%|██████████▎           | 7/15 [00:19<00:18,  2.37s/it]Optimising conformer:  53%|███████████▋          | 8/15 [00:23<00:18,  2.64s/it]Optimising conformer:  60%|█████████████▏        | 9/15 [00:25<00:15,  2.66s/it]Optimising conformer:  67%|██████████████       | 10/15 [00:30<00:16,  3.31s/it]Optimising conformer:  73%|███████████████▍     | 11/15 [00:33<00:13,  3.28s/it]Optimising conformer:  80%|████████████████▊    | 12/15 [00:37<00:09,  3.30s/it]Optimising conformer:  87%|██████████████████▏  | 13/15 [00:39<00:06,  3.02s/it]Optimising conformer:  93%|███████████████████▌ | 14/15 [00:42<00:03,  3.11s/it]Optimising conformer: 100%|█████████████████████| 15/15 [00:46<00:00,  3.15s/it]Optimising conformer: 100%|█████████████████████| 15/15 [00:46<00:00,  3.08s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 137.0s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 34 conformers. 
+Generated 15 conformers. 
+Removed 29 conformers. 
+Removed 3 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/12 [00:00<?, ?it/s]Optimising conformer:   8%|█▊                    | 1/12 [00:05<00:56,  5.14s/it]Optimising conformer:  17%|███▋                  | 2/12 [00:08<00:41,  4.17s/it]Optimising conformer:  25%|█████▌                | 3/12 [00:11<00:33,  3.74s/it]Optimising conformer:  33%|███████▎              | 4/12 [00:13<00:24,  3.05s/it]Optimising conformer:  42%|█████████▏            | 5/12 [00:15<00:18,  2.66s/it]Optimising conformer:  50%|███████████           | 6/12 [00:19<00:18,  3.02s/it]Optimising conformer:  58%|████████████▊         | 7/12 [00:22<00:15,  3.12s/it]Optimising conformer:  67%|██████████████▋       | 8/12 [00:26<00:12,  3.18s/it]Optimising conformer:  75%|████████████████▌     | 9/12 [00:28<00:08,  2.90s/it]Optimising conformer:  83%|█████████████████▌   | 10/12 [00:30<00:05,  2.70s/it]Optimising conformer:  92%|███████████████████▎ | 11/12 [00:32<00:02,  2.45s/it]Optimising conformer: 100%|█████████████████████| 12/12 [00:35<00:00,  2.53s/it]Optimising conformer: 100%|█████████████████████| 12/12 [00:35<00:00,  2.94s/it]
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:02<00:09,  2.36s/it]Optimising conformer:  40%|█████████▏             | 2/5 [00:05<00:08,  2.85s/it]Optimising conformer:  60%|█████████████▊         | 3/5 [00:06<00:04,  2.15s/it]Optimising conformer:  80%|██████████████████▍    | 4/5 [00:08<00:01,  1.79s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:09<00:00,  1.62s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:09<00:00,  1.88s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 95.9s.
+TIME Completed the molecule generation in 104.9s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 8 conformers. 
+Removed 3 conformers. 
+Generated 46 conformers. 
+Removed 26 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:02<00:09,  2.45s/it]Optimising conformer:  40%|█████████▏             | 2/5 [00:04<00:06,  2.08s/it]Optimising conformer:  60%|█████████████▊         | 3/5 [00:07<00:04,  2.40s/it]Optimising conformer:  80%|██████████████████▍    | 4/5 [00:09<00:02,  2.58s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:12<00:00,  2.62s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:12<00:00,  2.52s/it]
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/20 [00:00<?, ?it/s]Optimising conformer:   5%|█                     | 1/20 [00:04<01:31,  4.84s/it]Optimising conformer:  10%|██▏                   | 2/20 [00:06<00:55,  3.08s/it]Optimising conformer:  15%|███▎                  | 3/20 [00:08<00:45,  2.67s/it]Optimising conformer:  20%|████▍                 | 4/20 [00:11<00:45,  2.84s/it]Optimising conformer:  25%|█████▌                | 5/20 [00:14<00:42,  2.82s/it]Optimising conformer:  30%|██████▌               | 6/20 [00:19<00:50,  3.62s/it]Optimising conformer:  35%|███████▋              | 7/20 [00:23<00:48,  3.75s/it]Optimising conformer:  40%|████████▊             | 8/20 [00:26<00:38,  3.22s/it]Optimising conformer:  45%|█████████▉            | 9/20 [00:28<00:34,  3.13s/it]Optimising conformer:  50%|██████████▌          | 10/20 [00:31<00:30,  3.08s/it]Optimising conformer:  55%|███████████▌         | 11/20 [00:33<00:24,  2.77s/it]Optimising conformer:  60%|████████████▌        | 12/20 [00:37<00:23,  2.96s/it]Optimising conformer:  65%|█████████████▋       | 13/20 [00:39<00:19,  2.85s/it]Optimising conformer:  70%|██████████████▋      | 14/20 [00:42<00:16,  2.73s/it]Optimising conformer:  75%|███████████████▊     | 15/20 [00:44<00:13,  2.66s/it]Optimising conformer:  80%|████████████████▊    | 16/20 [00:46<00:09,  2.43s/it]Optimising conformer:  85%|█████████████████▊   | 17/20 [00:50<00:08,  2.70s/it]Optimising conformer:  90%|██████████████████▉  | 18/20 [00:54<00:06,  3.28s/it]Optimising conformer:  95%|███████████████████▉ | 19/20 [00:56<00:02,  2.90s/it]Optimising conformer: 100%|█████████████████████| 20/20 [00:58<00:00,  2.67s/it]Optimising conformer: 100%|█████████████████████| 20/20 [00:58<00:00,  2.95s/it]
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 46.5s.
+TIME Completed the molecule generation in 117.2s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 13 conformers. 
+Removed 6 conformers. 
+Generated 29 conformers. 
+Removed 24 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/7 [00:00<?, ?it/s]Optimising conformer:  14%|███▎                   | 1/7 [00:03<00:19,  3.23s/it]Optimising conformer:  29%|██████▌                | 2/7 [00:04<00:10,  2.06s/it]Optimising conformer:  43%|█████████▊             | 3/7 [00:05<00:06,  1.70s/it]Optimising conformer:  57%|█████████████▏         | 4/7 [00:08<00:05,  1.98s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s][AOptimising conformer:  71%|████████████████▍      | 5/7 [00:10<00:04,  2.27s/it]
+Optimising conformer:  20%|████▌                  | 1/5 [00:04<00:19,  4.76s/it][AOptimising conformer:  86%|███████████████████▋   | 6/7 [00:14<00:02,  2.83s/it]
+Optimising conformer:  40%|█████████▏             | 2/5 [00:08<00:13,  4.40s/it][AOptimising conformer: 100%|███████████████████████| 7/7 [00:19<00:00,  3.56s/it]Optimising conformer: 100%|███████████████████████| 7/7 [00:19<00:00,  2.84s/it]
+
+Optimising conformer:  60%|█████████████▊         | 3/5 [00:13<00:08,  4.27s/it][A
+Optimising conformer:  80%|██████████████████▍    | 4/5 [00:16<00:04,  4.13s/it][A
+Optimising conformer: 100%|███████████████████████| 5/5 [00:20<00:00,  4.00s/it][AOptimising conformer: 100%|███████████████████████| 5/5 [00:20<00:00,  4.14s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 60.5s.
+TIME Completed the molecule generation in 62.4s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 26 conformers. 
+Removed 17 conformers. 
+Generated 40 conformers. 
+Removed 37 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/3 [00:00<?, ?it/s]Optimising conformer:  33%|███████▋               | 1/3 [00:02<00:04,  2.46s/it]Optimising conformer:  67%|███████████████▎       | 2/3 [00:03<00:01,  1.84s/it]Optimising conformer: 100%|███████████████████████| 3/3 [00:05<00:00,  1.65s/it]Optimising conformer: 100%|███████████████████████| 3/3 [00:05<00:00,  1.76s/it]
+using ani2x
+TIME Completed the molecule generation in 73.8s.
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/9 [00:00<?, ?it/s]Optimising conformer:  11%|██▌                    | 1/9 [00:03<00:25,  3.16s/it]Optimising conformer:  22%|█████                  | 2/9 [00:05<00:18,  2.66s/it]Optimising conformer:  33%|███████▋               | 3/9 [00:07<00:14,  2.43s/it]Optimising conformer:  44%|██████████▏            | 4/9 [00:09<00:10,  2.09s/it]Optimising conformer:  56%|████████████▊          | 5/9 [00:11<00:08,  2.18s/it]Optimising conformer:  67%|███████████████▎       | 6/9 [00:13<00:06,  2.23s/it]Optimising conformer:  78%|█████████████████▉     | 7/9 [00:16<00:04,  2.26s/it]Optimising conformer:  89%|████████████████████▍  | 8/9 [00:18<00:02,  2.28s/it]Optimising conformer: 100%|███████████████████████| 9/9 [00:20<00:00,  2.24s/it]Optimising conformer: 100%|███████████████████████| 9/9 [00:20<00:00,  2.30s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 127.3s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 16 conformers. 
+Removed 12 conformers. 
+Generated 37 conformers. 
+Removed 29 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/4 [00:00<?, ?it/s]Optimising conformer:  25%|█████▊                 | 1/4 [00:03<00:11,  3.70s/it]Optimising conformer:  50%|███████████▌           | 2/4 [00:08<00:09,  4.51s/it]Optimising conformer:  75%|█████████████████▎     | 3/4 [00:10<00:03,  3.25s/it]Optimising conformer: 100%|███████████████████████| 4/4 [00:12<00:00,  2.80s/it]Optimising conformer: 100%|███████████████████████| 4/4 [00:12<00:00,  3.16s/it]
+TIME Completed the molecule generation in 82.9s.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]Optimising conformer:  12%|██▉                    | 1/8 [00:01<00:13,  1.90s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:02<00:07,  1.33s/it]Optimising conformer:  38%|████████▋              | 3/8 [00:03<00:05,  1.15s/it]Optimising conformer:  50%|███████████▌           | 4/8 [00:05<00:05,  1.37s/it]Optimising conformer:  62%|██████████████▍        | 5/8 [00:06<00:03,  1.21s/it]Optimising conformer:  75%|█████████████████▎     | 6/8 [00:07<00:02,  1.12s/it]Optimising conformer:  88%|████████████████████▏  | 7/8 [00:08<00:01,  1.09s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:11<00:00,  1.78s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:11<00:00,  1.45s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 136.3s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 33 conformers. 
+Generated 8 conformers. 
+Removed 2 conformers. 
+Removed 22 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/11 [00:00<?, ?it/s]Optimising conformer:   9%|██                    | 1/11 [00:02<00:29,  2.91s/it]Optimising conformer:  18%|████                  | 2/11 [00:06<00:28,  3.17s/it]Optimising conformer:  27%|██████                | 3/11 [00:08<00:20,  2.56s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/6 [00:00<?, ?it/s][AOptimising conformer:  36%|████████              | 4/11 [00:11<00:20,  3.00s/it]
+Optimising conformer:  17%|███▊                   | 1/6 [00:03<00:17,  3.59s/it][A
+Optimising conformer:  33%|███████▋               | 2/6 [00:06<00:13,  3.25s/it][AOptimising conformer:  45%|██████████            | 5/11 [00:15<00:19,  3.32s/it]
+Optimising conformer:  50%|███████████▌           | 3/6 [00:09<00:09,  3.16s/it][A
+Optimising conformer:  67%|███████████████▎       | 4/6 [00:12<00:05,  2.91s/it][AOptimising conformer:  55%|████████████          | 6/11 [00:20<00:20,  4.01s/it]
+Optimising conformer:  83%|███████████████████▏   | 5/6 [00:14<00:02,  2.81s/it][AOptimising conformer:  64%|██████████████        | 7/11 [00:24<00:15,  3.95s/it]
+Optimising conformer: 100%|███████████████████████| 6/6 [00:17<00:00,  2.75s/it][AOptimising conformer: 100%|███████████████████████| 6/6 [00:17<00:00,  2.91s/it]
+Optimising conformer:  73%|████████████████      | 8/11 [00:26<00:09,  3.32s/it]Optimising conformer:  82%|██████████████████    | 9/11 [00:30<00:07,  3.53s/it]Optimising conformer:  91%|███████████████████  | 10/11 [00:35<00:03,  3.76s/it]Optimising conformer: 100%|█████████████████████| 11/11 [00:39<00:00,  3.98s/it]Optimising conformer: 100%|█████████████████████| 11/11 [00:39<00:00,  3.59s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 77.8s.
+TIME Completed the molecule generation in 88.1s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 16 conformers. 
+Removed 15 conformers. 
+Generated 16 conformers. 
+Removed 14 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+using ani2x
+failed to equip `nnpops` with error: No module named 'NNPOps'
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+Optimising conformer:   0%|                               | 0/2 [00:00<?, ?it/s]Optimising conformer:  50%|███████████▌           | 1/2 [00:02<00:02,  2.06s/it]Optimising conformer: 100%|███████████████████████| 2/2 [00:02<00:00,  1.40s/it]Optimising conformer: 100%|███████████████████████| 2/2 [00:03<00:00,  1.50s/it]
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/1 [00:00<?, ?it/s]Optimising conformer: 100%|███████████████████████| 1/1 [00:04<00:00,  4.69s/it]Optimising conformer: 100%|███████████████████████| 1/1 [00:04<00:00,  4.69s/it]
+2024-01-19 05:37:21,168 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.134:36679
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.134:36679 after 30 s
+2024-01-19 05:37:21,205 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.129:41350
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.129:41350 after 30 s
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 72.1s.
+TIME Completed the molecule generation in 74.5s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 20 conformers. 
+Removed 15 conformers. 
+Generated 22 conformers. 
+Removed 14 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/8 [00:00<?, ?it/s]Optimising conformer:  12%|██▉                    | 1/8 [00:02<00:19,  2.75s/it]Optimising conformer:  25%|█████▊                 | 2/8 [00:04<00:14,  2.38s/it]Optimising conformer:  38%|████████▋              | 3/8 [00:08<00:14,  2.81s/it]Optimising conformer:  50%|███████████▌           | 4/8 [00:11<00:12,  3.14s/it]Optimising conformer:  62%|██████████████▍        | 5/8 [00:13<00:07,  2.60s/it]Optimising conformer:  75%|█████████████████▎     | 6/8 [00:17<00:06,  3.03s/it]Optimising conformer:  88%|████████████████████▏  | 7/8 [00:18<00:02,  2.57s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:22<00:00,  2.80s/it]Optimising conformer: 100%|███████████████████████| 8/8 [00:22<00:00,  2.78s/it]
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+TIME Completed the molecule generation in 71.6s.
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s]Optimising conformer:  20%|████▌                  | 1/5 [00:03<00:15,  3.86s/it]Optimising conformer:  40%|█████████▏             | 2/5 [00:07<00:11,  3.94s/it]Optimising conformer:  60%|█████████████▊         | 3/5 [00:10<00:06,  3.18s/it]Optimising conformer:  80%|██████████████████▍    | 4/5 [00:11<00:02,  2.60s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:15<00:00,  3.11s/it]Optimising conformer: 100%|███████████████████████| 5/5 [00:15<00:00,  3.17s/it]
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 92.2s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 40 conformers. 
+Generated 37 conformers. 
+Removed 22 conformers. 
+Removed 25 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/15 [00:00<?, ?it/s]Optimising conformer:   7%|█▍                    | 1/15 [00:02<00:38,  2.75s/it]Optimising conformer:  13%|██▉                   | 2/15 [00:04<00:31,  2.41s/it]Optimising conformer:  20%|████▍                 | 3/15 [00:13<01:01,  5.10s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                              | 0/15 [00:00<?, ?it/s][AOptimising conformer:  27%|█████▊                | 4/15 [00:15<00:42,  3.90s/it]
+Optimising conformer:   7%|█▍                    | 1/15 [00:03<00:47,  3.38s/it][AOptimising conformer:  33%|███████▎              | 5/15 [00:18<00:36,  3.64s/it]
+Optimising conformer:  13%|██▉                   | 2/15 [00:05<00:32,  2.51s/it][AOptimising conformer:  40%|████████▊             | 6/15 [00:20<00:28,  3.16s/it]
+Optimising conformer:  20%|████▍                 | 3/15 [00:07<00:29,  2.46s/it][A
+Optimising conformer:  27%|█████▊                | 4/15 [00:09<00:25,  2.29s/it][AOptimising conformer:  47%|██████████▎           | 7/15 [00:24<00:27,  3.50s/it]
+Optimising conformer:  33%|███████▎              | 5/15 [00:11<00:21,  2.20s/it][AOptimising conformer:  53%|███████████▋          | 8/15 [00:28<00:24,  3.45s/it]
+Optimising conformer:  40%|████████▊             | 6/15 [00:16<00:26,  2.95s/it][AOptimising conformer:  60%|█████████████▏        | 9/15 [00:30<00:18,  3.14s/it]
+Optimising conformer:  47%|██████████▎           | 7/15 [00:19<00:23,  2.96s/it][AOptimising conformer:  67%|██████████████       | 10/15 [00:35<00:17,  3.52s/it]
+Optimising conformer:  53%|███████████▋          | 8/15 [00:21<00:19,  2.84s/it][AOptimising conformer:  73%|███████████████▍     | 11/15 [00:36<00:12,  3.01s/it]
+Optimising conformer:  60%|█████████████▏        | 9/15 [00:23<00:15,  2.62s/it][AOptimising conformer:  80%|████████████████▊    | 12/15 [00:38<00:07,  2.65s/it]
+Optimising conformer:  67%|██████████████       | 10/15 [00:26<00:12,  2.60s/it][AOptimising conformer:  87%|██████████████████▏  | 13/15 [00:41<00:05,  2.81s/it]
+Optimising conformer:  73%|███████████████▍     | 11/15 [00:29<00:10,  2.62s/it][AOptimising conformer:  93%|███████████████████▌ | 14/15 [00:44<00:02,  2.62s/it]
+Optimising conformer:  80%|████████████████▊    | 12/15 [00:31<00:07,  2.45s/it][A
+Optimising conformer:  87%|██████████████████▏  | 13/15 [00:33<00:04,  2.46s/it][A
+Optimising conformer:  93%|███████████████████▌ | 14/15 [00:35<00:02,  2.35s/it][A
+Optimising conformer: 100%|█████████████████████| 15/15 [00:38<00:00,  2.42s/it][AOptimising conformer: 100%|█████████████████████| 15/15 [00:38<00:00,  2.55s/it]
+Optimising conformer: 100%|█████████████████████| 15/15 [01:17<00:00, 11.88s/it]Optimising conformer: 100%|█████████████████████| 15/15 [01:17<00:00,  5.16s/it]
+2024-01-19 07:42:06,894 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.95:33957
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.95:33957 after 30 s
+2024-01-19 07:42:06,916 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.95:35361
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.95:35361 after 30 s
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+TIME Completed the molecule generation in 117.8s.
+TIME Completed the molecule generation in 146.1s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 29 conformers. 
+Generated 4 conformers. 
+Removed 2 conformers. 
+Removed 19 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                               | 0/2 [00:00<?, ?it/s]Optimising conformer:  50%|███████████▌           | 1/2 [00:03<00:03,  3.66s/it]Optimising conformer: 100%|███████████████████████| 2/2 [00:06<00:00,  3.00s/it]Optimising conformer: 100%|███████████████████████| 2/2 [00:06<00:00,  3.10s/it]
+TIME Completed the molecule generation in 30.7s.
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/10 [00:00<?, ?it/s]Optimising conformer:  10%|██▏                   | 1/10 [00:03<00:33,  3.70s/it]Optimising conformer:  20%|████▍                 | 2/10 [00:09<00:41,  5.14s/it]Optimising conformer:  30%|██████▌               | 3/10 [00:12<00:27,  3.96s/it]Optimising conformer:  40%|████████▊             | 4/10 [00:18<00:29,  4.85s/it]Optimising conformer:  50%|███████████           | 5/10 [00:20<00:19,  3.95s/it]Optimising conformer:  60%|█████████████▏        | 6/10 [00:27<00:18,  4.69s/it]Optimising conformer:  70%|███████████████▍      | 7/10 [00:29<00:11,  3.92s/it]Optimising conformer:  80%|█████████████████▌    | 8/10 [00:31<00:06,  3.43s/it]Optimising conformer:  90%|███████████████████▊  | 9/10 [00:34<00:03,  3.16s/it]Optimising conformer: 100%|█████████████████████| 10/10 [00:39<00:00,  3.75s/it]Optimising conformer: 100%|█████████████████████| 10/10 [00:39<00:00,  3.94s/it]
+2024-01-19 08:03:39,300 - distributed.worker - ERROR - Worker stream died during communication: tcp://10.3.89.124:40469
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/tcp.py", line 225, in read
+    frames_nbytes = await stream.read_bytes(fmt_size)
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 490, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 328, in connect
+    handshake = await asyncio.wait_for(comm.read(), time_left())
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2081, in gather_dep
+    response = await get_data_from_worker(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/worker.py", line 2900, in get_data_from_worker
+    comm = await rpc.connect(worker)
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1468, in connect
+    return await connect_attempt
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/core.py", line 1389, in _connect
+    comm = await connect(
+  File "/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/distributed/comm/core.py", line 333, in connect
+    raise OSError(
+OSError: Timed out during handshake while connecting to tcp://10.3.89.124:40469 after 30 s
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/parmed/structure.py:1775: UnitStrippedWarning: The unit of the quantity is stripped when downcasting to ndarray.
+  coords = np.array(value, dtype=np.float64, copy=False, subok=True)
+Warning (not error because allow_undefined_stereo=True): RDMol has unspecified stereochemistry. Bonds with undefined stereochemistry are:
+ - Bond 1 (atoms 1-2 of element (C-C)
+
+TIME Completed the molecule generation in 110.0s.
+TIME changed dir: 0.0s
+TIME changed dir: 0.0s
+Generated 18 conformers. 
+Removed 8 conformers. 
+Generated 17 conformers. 
+Removed 12 conformers. 
+using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+Optimising conformer:   0%|                              | 0/10 [00:00<?, ?it/s]Optimising conformer:  10%|██▏                   | 1/10 [00:02<00:19,  2.12s/it]Optimising conformer:  20%|████▍                 | 2/10 [00:03<00:11,  1.46s/it]Optimising conformer:  30%|██████▌               | 3/10 [00:06<00:14,  2.12s/it]Optimising conformer:  40%|████████▊             | 4/10 [00:10<00:17,  2.89s/it]Optimising conformer:  50%|███████████           | 5/10 [00:11<00:11,  2.21s/it]Optimising conformer:  60%|█████████████▏        | 6/10 [00:12<00:08,  2.09s/it]Optimising conformer:  70%|███████████████▍      | 7/10 [00:15<00:06,  2.22s/it]Optimising conformer:  80%|█████████████████▌    | 8/10 [00:17<00:04,  2.17s/it]using ani2x
+/mnt/storage/nobackup/nmb1063/mamba/envs/fegrow/lib/python3.9/site-packages/torchani/resources/
+failed to equip `nnpops` with error: No module named 'NNPOps'
+
+Optimising conformer:   0%|                               | 0/5 [00:00<?, ?it/s][A
+Optimising conformer:  20%|████▌                  | 1/5 [00:02<00:10,  2.67s/it][A
+Optimising conformer:  40%|█████████▏             | 2/5 [00:06<00:09,  3.21s/it][A
+Optimising conformer:  60%|█████████████▊         | 3/5 [00:07<00:04,  2.16s/it][A
+Optimising conformer:  80%|██████████████████▍    | 4/5 [00:10<00:02,  2.65s/it][A
+Optimising conformer: 100%|███████████████████████| 5/5 [00:11<00:00,  2.11s/it][AOptimising conformer: 100%|███████████████████████| 5/5 [00:11<00:00,  2.34s/it]
+Optimising conformer:  90%|███████████████████▊  | 9/10 [01:32<00:24, 24.91s/it]Optimising conformer: 100%|█████████████████████| 10/10 [01:34<00:00, 17.71s/it]Optimising conformer: 100%|█████████████████████| 10/10 [01:34<00:00,  9.40s/it]
+slurmstepd: error: *** JOB 19786471 ON sb092 CANCELLED AT 2024-01-19T09:03:31 DUE TO TIME LIMIT ***
